@@ -18,9 +18,8 @@ def loss_(y, y_hat):
     if (y.shape != y_hat.shape):
         return None
     diff = y - y_hat
-    diff = np.squeeze(np.asarray(diff))
     fct = (1 / (2 * len(y)))
-    return fct * diff.dot(diff)
+    return fct * diff.dot(diff.T)
 
 X = np.array([[0], [15], [-9], [7], [12], [3], [-21]])
 Y = np.array([[2], [14], [-13], [5], [12], [4], [-19]])
