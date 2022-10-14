@@ -39,7 +39,7 @@ def plot_with_loss(x, y, theta):
     plt.figure()
     for x1, y1 in zip(x, y):
         plt.plot(x1, y1, marker='o', color="blue")
-    xline = np.linspace(1,5,len(x))
+    xline = np.linspace(min(x), max(x), len(x))
     yline = theta[0] + xline * theta[1]
     plt.plot([x, x], [y, yline], color="red", linestyle='dotted')
     loss = loss_(y, yline)
