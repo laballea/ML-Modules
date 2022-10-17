@@ -2,7 +2,6 @@ import math
 import numpy as np
 
 
-
 def zscore(x):
     """Computes the normalized version of a non-empty numpy.ndarray using the z-score standardization.
     Args:
