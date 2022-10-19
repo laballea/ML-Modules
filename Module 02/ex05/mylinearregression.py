@@ -64,20 +64,17 @@ class MyLinearRegression():
             return None
         x = self.add_intercept(x, 1)
         return x.dot(self.thetas)
-    
-    def loss_elem_(self, y, y_hat):
-        if (not (isinstance(y, np.ndarray) or isinstance(y_hat, np.ndarray))):
-            return None
-        if (y.shape != y_hat.shape):
-            return None
-        return np.array([(j - i)**2 for (i, j) in zip(y, y_hat)])
 
     def loss_(self, y, y_hat):
         if (not isinstance(y, np.ndarray) or not isinstance(y_hat, np.ndarray)):
             return None
         if (y.shape != y_hat.shape):
             return None
-        return float((1 / (2 * len(y))) * sum(self.loss_elem_(y, y_hat)))
+        y = y.reshape(len(y),)
+        y_hat = y_hat.reshape(len(y_hat),)
+        diff = y - y_hat
+        fct = (1 / (2 * len(y)))
+        return fct * diff.dot(diff.T)
 
     def predict(self, x, theta):
         if (not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
@@ -89,11 +86,10 @@ class MyLinearRegression():
         x = self.add_intercept(x, 1)
         return x.dot(theta)
 
-    def loss_evolve(self, x, y, theta0):
+    def loss_evolve(self, x, y, theta0, theta1):
         loss_arr = []
-        for theta1 in np.arange(-14, -3, 0.25):
+        for theta1 in np.arange(0, 2 * theta1, 1):
             y_hat = self.predict(x, np.array([[theta0], [theta1]]))
             loss = self.loss_(y, y_hat)
-            if loss < 150:
-                loss_arr.append([loss, theta1])
+            loss_arr.append([loss, theta1])
         return np.array(loss_arr)
