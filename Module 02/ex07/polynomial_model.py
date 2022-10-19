@@ -14,7 +14,7 @@ def add_polynomial_features(x, power):
     Raises:
     This function should not raise any Exception.
     """
-    if (not isinstance(x, np.ndarray)):
+    if (not isinstance(x, np.ndarray) or not isinstance(power, int)):
         print("Invalid type")
         return None
     x = x.reshape(len(x),)
