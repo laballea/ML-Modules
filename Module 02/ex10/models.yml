@@ -1,0 +1,1607 @@
+data:
+  1st_quartil: 18980.326664610133
+  best_model: wei**2_pro**4_tim**4_
+  max_poly: 4
+  path: space_avocado.csv
+  x_head: [weight, prod_distance, time_delivery]
+  y_head: [target]
+models:
+  wei**0_pro**0_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.7896976797, end_rmse: 94664.85688170641, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 0, 1]
+    rmse: 94664.85688170641
+    theta: [644703, 418]
+    total_it: 1000
+  wei**0_pro**0_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.4356715509, end_rmse: 94767.31092908508, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 0, 2]
+    rmse: 94767.31092908508
+    theta: [638281, 39461, -37835]
+    total_it: 1000
+  wei**0_pro**0_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.15948463, end_rmse: 94834.18157758655, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 0, 3]
+    rmse: 94834.18157758655
+    theta: [636229, 40917, -16988, -22043]
+    total_it: 1000
+  wei**0_pro**0_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.9298293807, end_rmse: 94817.9208795257, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 0, 4]
+    rmse: 94817.9208795257
+    theta: [636980, 35110, -14405, -13273, -5074]
+    total_it: 1000
+  wei**0_pro**1_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.8178123283, end_rmse: 94368.11279208733, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 1, 0]
+    rmse: 94368.11279208733
+    theta: [652322, -14967]
+    total_it: 1000
+  wei**0_pro**1_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.3079781848, end_rmse: 94388.52569187566, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 1, 1]
+    rmse: 94388.52569187566
+    theta: [651650, -14474, 797]
+    total_it: 1000
+  wei**0_pro**1_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.9539520723, end_rmse: 94481.52886781644, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 1, 2]
+    rmse: 94481.52886781644
+    theta: [645266, -14565, 40537, -38782]
+    total_it: 1000
+  wei**0_pro**1_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.6777651637, end_rmse: 94556.11654469973, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 1, 3]
+    rmse: 94556.11654469973
+    theta: [642844, -14213, 42647, -17286, -23363]
+    total_it: 1000
+  wei**0_pro**1_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.4481099241, end_rmse: 94548.10227680186, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 1, 4]
+    rmse: 94548.10227680186
+    theta: [643325, -13931, 36998, -14253, -14004, -6278]
+    total_it: 1000
+  wei**0_pro**2_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.5104370072, end_rmse: 93895.99130229108, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 2, 0]
+    rmse: 93895.99130229108
+    theta: [654094, -50435, 48166]
+    total_it: 1000
+  wei**0_pro**2_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.0006028814, end_rmse: 93932.23829317495, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 2, 1]
+    rmse: 93932.23829317495
+    theta: [653248, -50179, 48044, 1495]
+    total_it: 1000
+  wei**0_pro**2_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.6465767842, end_rmse: 94010.57826256103, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 2, 2]
+    rmse: 94010.57826256103
+    theta: [646894, -50549, 48445, 40981, -38496]
+    total_it: 1000
+  wei**0_pro**2_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.3703898882, end_rmse: 94084.14727364248, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 2, 3]
+    rmse: 94084.14727364248
+    theta: [644560, -50436, 48631, 43037, -17093, -23254]
+    total_it: 1000
+  wei**0_pro**2_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.1407346592, end_rmse: 94080.12107624026, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 2, 4]
+    rmse: 94080.12107624026
+    theta: [645089, -50210, 48606, 37395, -14083, -13934, -6259]
+    total_it: 1000
+  wei**0_pro**3_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.2899197681, end_rmse: 92807.35690514644, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 3, 0]
+    rmse: 92807.35690514644
+    theta: [662752, -79032, -4793, 94153]
+    total_it: 1000
+  wei**0_pro**3_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.7800856563, end_rmse: 92874.08382337482, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 3, 1]
+    rmse: 92874.08382337482
+    theta: [661350, -78271, -4782, 93497, 2333]
+    total_it: 1000
+  wei**0_pro**3_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.4260595726, end_rmse: 92917.09021969562, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 3, 2]
+    rmse: 92917.09021969562
+    theta: [655083, -78784, -4573, 93824, 41831, -38600]
+    total_it: 1000
+  wei**0_pro**3_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.1498726883, end_rmse: 92984.36056961067, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 3, 3]
+    rmse: 92984.36056961067
+    theta: [652753, -78674, -4444, 93831, 43974, -17090, -23495]
+    total_it: 1000
+  wei**0_pro**3_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.9202174697, end_rmse: 92988.16648432743, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 3, 4]
+    rmse: 92988.16648432743
+    theta: [653259, -78396, -4429, 93705, 38366, -14013, -14090, -6470]
+    total_it: 1000
+  wei**0_pro**4_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.1195981788, end_rmse: 92003.3945474764, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 4, 0]
+    rmse: 92003.3945474764
+    theta: [669940, -87527, -39401, 44365, 105943]
+    total_it: 1000
+  wei**0_pro**4_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.6097640784, end_rmse: 92081.66641386735, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 4, 1]
+    rmse: 92081.66641386735
+    theta: [668227, -86465, -39076, 43963, 105066, 2652]
+    total_it: 1000
+  wei**0_pro**4_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.2557380063, end_rmse: 92093.9005328753, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 4, 2]
+    rmse: 92093.9005328753
+    theta: [661992, -87011, -38950, 44184, 105266, 42285, -38794]
+    total_it: 1000
+  wei**0_pro**4_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.9795511329, end_rmse: 92153.09451655112, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 4, 3]
+    rmse: 92153.09451655112
+    theta: [659634, -86863, -38800, 44194, 105169, 44491, -17177, -23671]
+    total_it: 1000
+  wei**0_pro**4_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.7498959241, end_rmse: 92162.29689593628, max_iter: 1000}
+    max_iter: 1000
+    power_x: [0, 4, 4]
+    rmse: 92162.29689593628
+    theta: [660115, -86550, -38738, 44117, 105019, 38885, -14062, -14208, -6560]
+    total_it: 1000
+  wei**1_pro**0_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.7757346556, end_rmse: 29937.938410674597,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 0, 0]
+    rmse: 29937.938410674597
+    theta: [501496, 285891]
+    total_it: 1000
+  wei**1_pro**0_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.2659004567, end_rmse: 29934.649426311058,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 0, 1]
+    rmse: 29934.649426311058
+    theta: [502243, 286018, -1644]
+    total_it: 1000
+  wei**1_pro**0_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.9118743005, end_rmse: 30458.417004279243,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 0, 2]
+    rmse: 30458.417004279243
+    theta: [496958, 286037, 30967, -31845]
+    total_it: 1000
+  wei**1_pro**0_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.6356873552, end_rmse: 30704.470002979488,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 0, 3]
+    rmse: 30704.470002979488
+    theta: [495069, 286243, 32582, -13974, -19464]
+    total_it: 1000
+  wei**1_pro**0_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.4060320841, end_rmse: 30613.48288943133, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 0, 4]
+    rmse: 30613.48288943133
+    theta: [495498, 286389, 28005, -11300, -11509, -5850]
+    total_it: 1000
+  wei**1_pro**1_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.2940151143, end_rmse: 29219.092947542435,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 1, 0]
+    rmse: 29219.092947542435
+    theta: [509075, 286152, -15593]
+    total_it: 1000
+  wei**1_pro**1_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.7841809371, end_rmse: 29231.071956153133,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 1, 1]
+    rmse: 29231.071956153133
+    theta: [509327, 286438, -15155, -1294]
+    total_it: 1000
+  wei**1_pro**1_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.4301547972, end_rmse: 29760.46295133043, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 1, 2]
+    rmse: 29760.46295133043
+    theta: [504129, 286380, -15265, 31913, -32651]
+    total_it: 1000
+  wei**1_pro**1_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.1539678642, end_rmse: 30032.893836814983,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 1, 3]
+    rmse: 30032.893836814983
+    theta: [501972, 286567, -15008, 34037, -14246, -20532]
+    total_it: 1000
+  wei**1_pro**1_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.9243126027, end_rmse: 29959.999210017315,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 1, 4]
+    rmse: 29959.999210017315
+    theta: [502187, 286725, -14786, 29576, -11222, -12111, -6793]
+    total_it: 1000
+  wei**1_pro**2_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.9866397735, end_rmse: 26275.32506510199, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 2, 0]
+    rmse: 26275.32506510199
+    theta: [512116, 286709, -58983, 55518]
+    total_it: 1000
+  wei**1_pro**2_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.476805614, end_rmse: 26288.819572450975, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 2, 1]
+    rmse: 26288.819572450975
+    theta: [512201, 286905, -58708, 55390, -596]
+    total_it: 1000
+  wei**1_pro**2_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.1227794893, end_rmse: 26813.768302857123,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 2, 2]
+    rmse: 26813.768302857123
+    theta: [507017, 286870, -59028, 55694, 32427, -32456]
+    total_it: 1000
+  wei**1_pro**2_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.846592569, end_rmse: 27107.89397011526, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 2, 3]
+    rmse: 27107.89397011526
+    theta: [504917, 287062, -58962, 55851, 34532, -14094, -20502]
+    total_it: 1000
+  wei**1_pro**2_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.6169373181, end_rmse: 27041.83992109545, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 2, 4]
+    rmse: 27041.83992109545
+    theta: [505166, 287218, -58790, 55844, 30083, -11071, -12089, -6826]
+    total_it: 1000
+  wei**1_pro**3_tim**0_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.7661225171, end_rmse: 20611.605522870563,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 22132.050868197017, end_rmse: 16229.051969268856,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 16456.033268783012, end_rmse: 14662.592639652967,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 14101.398125958764, end_rmse: 13748.729343947083,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 13695.675170296829, end_rmse: 13645.358623035045,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 13506.169526061702, end_rmse: 13498.523441468196,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 13609.678945570668, end_rmse: 13608.45415606863,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 13449.31779858761, end_rmse: 13449.60952315597,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [1, 3, 0]
+    rmse: 13449.60952315597
+    theta: [554990, 285758, -212773, -6610, 225727]
+    total_it: 65000
+  wei**1_pro**3_tim**1_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.2562883716, end_rmse: 20672.910794627365,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 22193.988428267894, end_rmse: 16233.138092576184,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 16472.049529545715, end_rmse: 14656.234713740118,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 14082.969520823386, end_rmse: 13723.681568729786,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 13684.405711364283, end_rmse: 13633.141392036749,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 13534.324555810004, end_rmse: 13530.066343317832,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 13615.343370949106, end_rmse: 13614.374371257918,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 13413.64809781512, end_rmse: 13414.305886234595,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [1, 3, 1]
+    rmse: 13414.305886234595
+    theta: [555791, 285784, -212673, -6594, 225648, -1699]
+    total_it: 65000
+  wei**1_pro**3_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.9022622604, end_rmse: 21204.717801860916,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 3, 2]
+    rmse: 21204.717801860916
+    theta: [515491, 287404, -87740, -1356, 98111, 33239, -32579]
+    total_it: 1000
+  wei**1_pro**3_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.626075352, end_rmse: 21548.647696450404, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 3, 3]
+    rmse: 21548.647696450404
+    theta: [513393, 287590, -87680, -1248, 98129, 35425, -14107, -20730]
+    total_it: 1000
+  wei**1_pro**3_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.3964201114, end_rmse: 21492.75558787389, max_iter: 1000}
+    max_iter: 1000
+    power_x: [1, 3, 4]
+    rmse: 21492.75558787389
+    theta: [513626, 287741, -87472, -1228, 98038, 31001, -11023, -12238, -7009]
+    total_it: 1000
+  wei**1_pro**4_tim**0_:
+    alpha: 1.0000000000000005e-07
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.5958009122, end_rmse: 15860.041091334624,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 16906.602146387726, end_rmse: 12740.779471190917,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 12802.996273703402, end_rmse: 12247.527818269189,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 12181.98501960213, end_rmse: 12170.044746036374,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 11997.66452737264, end_rmse: 11993.416064152758,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 11860.452245524388, end_rmse: 11861.05038113196,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 11855.377054367766, end_rmse: 11855.267142111818,
+        max_iter: 32000}
+    - - {alpha: 1.0000000000000005e-07, begin_rmse: 11817.576241870864, end_rmse: 11817.569383888076,
+        max_iter: 64000}
+    max_iter: 64000
+    power_x: [1, 4, 0]
+    rmse: 11817.569383888076
+    theta: [550152, 285741, -158112, -60937, 72726, 168786]
+    total_it: 128000
+  wei**1_pro**4_tim**1_:
+    alpha: 1.0000000000000005e-07
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.0859667782, end_rmse: 15961.285363334293,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 17013.804405047227, end_rmse: 12735.146543636882,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 12808.12488927493, end_rmse: 12233.923984546554,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 12148.491533036713, end_rmse: 12138.232820301515,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 11985.784594312378, end_rmse: 11980.932435355478,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 11876.700445242448, end_rmse: 11877.319848770301,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 11855.567356351608, end_rmse: 11855.504379686956,
+        max_iter: 32000}
+    - - {alpha: 1.0000000000000005e-07, begin_rmse: 11780.404451529379, end_rmse: 11780.443631932196,
+        max_iter: 64000}
+    max_iter: 64000
+    power_x: [1, 4, 1]
+    rmse: 11780.443631932196
+    theta: [550881, 285745, -158041, -60905, 72697, 168720, -1530]
+    total_it: 128000
+  wei**1_pro**4_tim**2_:
+    alpha: 1.0000000000000005e-07
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.7319406786, end_rmse: 16508.62832163284, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 17219.08065945301, end_rmse: 12911.799858247943,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 12803.939414236109, end_rmse: 12193.272522302166,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 12227.09618415243, end_rmse: 12205.748238575221,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 12038.919299184634, end_rmse: 12032.58227999321,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 12036.510530509548, end_rmse: 12037.56702127506,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 11893.408695782777, end_rmse: 11893.417359287905,
+        max_iter: 32000}
+    - - {alpha: 1.0000000000000005e-07, begin_rmse: 11874.983291618802, end_rmse: 11875.04033424804,
+        max_iter: 64000}
+    max_iter: 64000
+    power_x: [1, 4, 2]
+    rmse: 11875.04033424804
+    theta: [547949, 285797, -157957, -60796, 72674, 168594, 15639, -16577]
+    total_it: 128000
+  wei**1_pro**4_tim**3_:
+    alpha: 1.0000000000000005e-07
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.455753781, end_rmse: 16906.918861861504, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 17493.504891589262, end_rmse: 12893.082744169658,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 12821.089558693697, end_rmse: 12196.56517160251,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 12174.657567254377, end_rmse: 12155.030752932027,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 11995.89788014275, end_rmse: 11989.886015988119,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 11939.74896410329, end_rmse: 11941.383679477327,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 11856.221417152326, end_rmse: 11856.265985397715,
+        max_iter: 32000}
+    - - {alpha: 1.0000000000000005e-07, begin_rmse: 11811.262439000817, end_rmse: 11811.357305654448,
+        max_iter: 64000}
+    max_iter: 64000
+    power_x: [1, 4, 3]
+    rmse: 11811.357305654448
+    theta: [549141, 285810, -157826, -60819, 72624, 168548, 8490, -11003, 1509]
+    total_it: 128000
+  wei**1_pro**4_tim**4_:
+    alpha: 1.0000000000000005e-07
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.2260985503, end_rmse: 16853.78090528159, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 17479.59365466721, end_rmse: 12819.068457763058,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 12787.51373221546, end_rmse: 12193.404246756187,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 12147.08183333283, end_rmse: 12133.29759992542,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 11985.06612720024, end_rmse: 11979.604353624078,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 11896.451862770571, end_rmse: 11898.878719749453,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 11870.914956883786, end_rmse: 11871.02355800665,
+        max_iter: 32000}
+    - - {alpha: 1.0000000000000005e-07, begin_rmse: 11785.414216161034, end_rmse: 11785.54256072627,
+        max_iter: 64000}
+    max_iter: 64000
+    power_x: [1, 4, 4]
+    rmse: 11785.54256072627
+    theta: [549560, 285779, -157855, -60848, 72629, 168582, 8940, -14359, -3539, 8570]
+    total_it: 128000
+  wei**2_pro**0_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.401328708, end_rmse: 30741.5667639356, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 0, 0]
+    rmse: 30741.5667639356
+    theta: [508834, 252228, 27277]
+    total_it: 1000
+  wei**2_pro**0_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.8914944733, end_rmse: 30724.52159838886, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 0, 1]
+    rmse: 30724.52159838886
+    theta: [509811, 252612, 26961, -2136]
+    total_it: 1000
+  wei**2_pro**0_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.537468287, end_rmse: 31267.178563546597, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 0, 2]
+    rmse: 31267.178563546597
+    theta: [504403, 252211, 27414, 31322, -32572]
+    total_it: 1000
+  wei**2_pro**0_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.2612813154, end_rmse: 31514.57684566864, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 0, 3]
+    rmse: 31514.57684566864
+    theta: [502505, 252177, 27623, 32973, -14300, -19844]
+    total_it: 1000
+  wei**2_pro**0_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.0316260199, end_rmse: 31416.601515388877,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 0, 4]
+    rmse: 31416.601515388877
+    theta: [502971, 252284, 27625, 28246, -11581, -11701, -5900]
+    total_it: 1000
+  wei**2_pro**1_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.919609139, end_rmse: 29999.00917166541, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 1, 0]
+    rmse: 29999.00917166541
+    theta: [516668, 253185, 26493, -16244]
+    total_it: 1000
+  wei**2_pro**1_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.4097749258, end_rmse: 29996.409482406678,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 1, 1]
+    rmse: 29996.409482406678
+    theta: [517185, 253603, 26259, -15805, -1790]
+    total_it: 1000
+  wei**2_pro**1_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.0557487559, end_rmse: 30545.611267764612,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 1, 2]
+    rmse: 30545.611267764612
+    theta: [511851, 253170, 26682, -15913, 32290, -33416]
+    total_it: 1000
+  wei**2_pro**1_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.7795617965, end_rmse: 30819.861888684773,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 1, 3]
+    rmse: 30819.861888684773
+    theta: [509668, 253106, 26913, -15640, 34469, -14589, -20952]
+    total_it: 1000
+  wei**2_pro**1_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.5499065106, end_rmse: 30740.118624092654,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 1, 4]
+    rmse: 30740.118624092654
+    theta: [509911, 253203, 26941, -15406, 29865, -11505, -12325, -6876]
+    total_it: 1000
+  wei**2_pro**2_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.6122337768, end_rmse: 27188.414137024898,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 2, 0]
+    rmse: 27188.414137024898
+    theta: [519556, 253628, 26557, -58829, 54859]
+    total_it: 1000
+  wei**2_pro**2_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.1023995813, end_rmse: 27186.40033763189, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 2, 1]
+    rmse: 27186.40033763189
+    theta: [519906, 253990, 26304, -58539, 54697, -1099]
+    total_it: 1000
+  wei**2_pro**2_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.7483734266, end_rmse: 27730.518835561754,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 2, 2]
+    rmse: 27730.518835561754
+    theta: [514584, 253569, 26736, -58863, 55016, 32793, -33210]
+    total_it: 1000
+  wei**2_pro**2_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.4721864798, end_rmse: 28025.18002191255, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 2, 3]
+    rmse: 28025.18002191255
+    theta: [512462, 253511, 26963, -58789, 55178, 34947, -14431, -20909]
+    total_it: 1000
+  wei**2_pro**2_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.2425312046, end_rmse: 27952.274378138573,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 2, 4]
+    rmse: 27952.274378138573
+    theta: [512742, 253609, 26986, -58609, 55171, 30352, -11353, -12295, -6898]
+    total_it: 1000
+  wei**2_pro**3_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.3917165027, end_rmse: 21803.586662946505,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 3, 0]
+    rmse: 21803.586662946505
+    theta: [528394, 254412, 26226, -87789, -1881, 98160]
+    total_it: 1000
+  wei**2_pro**3_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.8818823212, end_rmse: 21843.54892347131, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 3, 1]
+    rmse: 21843.54892347131
+    theta: [528257, 254731, 26008, -87095, -1903, 97590, -326]
+    total_it: 1000
+  wei**2_pro**3_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.52785618, end_rmse: 22390.382956199443, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 3, 2]
+    rmse: 22390.382956199443
+    theta: [522998, 254315, 26435, -87535, -1737, 97858, 33606, -33326]
+    total_it: 1000
+  wei**2_pro**3_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.251669245, end_rmse: 22729.567795393614, max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 3, 3]
+    rmse: 22729.567795393614
+    theta: [520880, 254254, 26660, -87468, -1625, 97876, 35840, -14441, -21134]
+    total_it: 1000
+  wei**2_pro**3_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.0220139801, end_rmse: 22667.010302192553,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [2, 3, 4]
+    rmse: 22667.010302192553
+    theta: [521143, 254349, 26682, -87250, -1605, 97782, 31271, -11302, -12442, -7080]
+    total_it: 1000
+  wei**2_pro**4_tim**0_:
+    alpha: 0.00010000000000000003
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.2213948824, end_rmse: 17416.88522519278, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 18590.853123145793, end_rmse: 11211.945113621496,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 11175.423894826905, end_rmse: 8384.537656854134,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8466.021466695458, end_rmse: 7233.609241720732, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 6731.4071451895015, end_rmse: 5996.998801459928,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 5820.939481642944, end_rmse: 5455.986032095109,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5834.311783571842, end_rmse: 5780.902706146375,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5718.3029862130315, end_rmse: 5710.339116115595,
+        max_iter: 8000}
+    max_iter: 8000
+    power_x: [2, 4, 0]
+    rmse: 5710.339116115595
+    theta: [536289, 384768, -99902, -153829, -76193, 71581, 182514]
+    total_it: 19000
+  wei**2_pro**4_tim**1_:
+    alpha: 0.00010000000000000003
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.7115607124, end_rmse: 17485.80270026056, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 18665.096994387182, end_rmse: 11180.136473550381,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 11165.355482213732, end_rmse: 8350.142558855967,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8414.351661263521, end_rmse: 7184.54306507207, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 6710.546134459141, end_rmse: 5979.034926692464, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 5844.204110883602, end_rmse: 5482.885385576974,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5829.355737778364, end_rmse: 5775.081586455872,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5690.861380030426, end_rmse: 5683.218758490051,
+        max_iter: 8000}
+    max_iter: 8000
+    power_x: [2, 4, 1]
+    rmse: 5683.218758490051
+    theta: [537244, 384806, -99962, -153854, -76179, 71584, 182508, -1876]
+    total_it: 19000
+  wei**2_pro**4_tim**2_:
+    alpha: 0.00010000000000000003
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.357534583, end_rmse: 18037.614697318382, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 18889.873519203964, end_rmse: 11395.031265533122,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 11210.33816752295, end_rmse: 8368.878443865233, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8517.68790706613, end_rmse: 7235.480729255998, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 6767.557318195555, end_rmse: 6004.470133866187, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 5968.3531241986, end_rmse: 5578.011136092202,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5853.451244658233, end_rmse: 5796.545373825815,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5703.396793274872, end_rmse: 5695.109738707767,
+        max_iter: 8000}
+    max_iter: 8000
+    power_x: [2, 4, 2]
+    rmse: 5695.109738707767
+    theta: [536066, 384887, -100038, -153802, -76150, 71559, 182457, 4976, -6600]
+    total_it: 19000
+  wei**2_pro**4_tim**3_:
+    alpha: 0.00010000000000000003
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.0813476588, end_rmse: 18419.187627132877,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 19157.48304198915, end_rmse: 11365.901043662892,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 11213.826850572228, end_rmse: 8332.632072546654,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8436.752566872168, end_rmse: 7175.99896806573, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 6706.7250174302535, end_rmse: 5971.750079924421,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 5864.402200023156, end_rmse: 5506.6624345901055,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5834.8286136211345, end_rmse: 5779.635333919148,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5683.618355591275, end_rmse: 5675.920492816106,
+        max_iter: 8000}
+    max_iter: 8000
+    power_x: [2, 4, 3]
+    rmse: 5675.920492816106
+    theta: [536625, 384876, -100029, -153827, -76176, 71569, 182497, 3406, -9792,
+      4999]
+    total_it: 19000
+  wei**2_pro**4_tim**4_:
+    alpha: 0.00010000000000000003
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.8516924037, end_rmse: 18359.870685542937,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 19139.341389295456, end_rmse: 11274.131017153577,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 11161.326169471278, end_rmse: 8311.72189142721, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8406.616347213614, end_rmse: 7168.550370809268, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 6708.113024046411, end_rmse: 5977.807588375636, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 5859.215162250625, end_rmse: 5511.311756703958,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5846.582495980846, end_rmse: 5790.709663333286,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5683.7336374621755, end_rmse: 5675.895525968873,
+        max_iter: 8000}
+    max_iter: 8000
+    power_x: [2, 4, 4]
+    rmse: 5675.895525968873
+    theta: [536312, 384843, -99999, -153847, -76171, 71576, 182505, 6574, -12680,
+      -2522, 7899]
+    total_it: 19000
+  wei**3_pro**0_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643876.1029277984, end_rmse: 29562.46434773577, max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 0, 0]
+    rmse: 29562.46434773577
+    theta: [503920, 270452, 56375, -51764]
+    total_it: 1000
+  wei**3_pro**0_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.59309353, end_rmse: 29536.111430347024, max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 0, 1]
+    rmse: 29536.111430347024
+    theta: [504971, 271238, 56232, -52338, -2486]
+    total_it: 1000
+  wei**3_pro**0_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.2390673157, end_rmse: 30078.13546588916, max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 0, 2]
+    rmse: 30078.13546588916
+    theta: [499608, 270703, 56436, -51954, 30776, -32284]
+    total_it: 1000
+  wei**3_pro**0_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.9628803189, end_rmse: 30318.03254593357, max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 0, 3]
+    rmse: 30318.03254593357
+    theta: [497762, 270674, 56541, -51876, 32277, -14199, -19473]
+    total_it: 1000
+  wei**3_pro**0_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.7332250004, end_rmse: 30210.742413921784,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 0, 4]
+    rmse: 30210.742413921784
+    theta: [498253, 270831, 56549, -51949, 27494, -11591, -11468, -5573]
+    total_it: 1000
+  wei**3_pro**1_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.6212082017, end_rmse: 28739.341056029552,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 1, 0]
+    rmse: 28739.341056029552
+    theta: [511794, 271941, 56113, -52821, -16633]
+    total_it: 1000
+  wei**3_pro**1_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.1113739549, end_rmse: 28726.955223239525,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 1, 1]
+    rmse: 28726.955223239525
+    theta: [512430, 272765, 56006, -53380, -16226, -2174]
+    total_it: 1000
+  wei**3_pro**1_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.757347757, end_rmse: 29277.23133883643, max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 1, 2]
+    rmse: 29277.23133883643
+    theta: [507123, 272194, 56195, -52994, -16320, 31732, -33140]
+    total_it: 1000
+  wei**3_pro**1_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.4811607725, end_rmse: 29544.953023719983,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 1, 3]
+    rmse: 29544.953023719983
+    theta: [504991, 272119, 56309, -52884, -16043, 33760, -14494, -20579]
+    total_it: 1000
+  wei**3_pro**1_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.2515054636, end_rmse: 29455.596978331345,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 1, 4]
+    rmse: 29455.596978331345
+    theta: [505263, 272257, 56329, -52936, -15811, 29095, -11524, -12090, -6539]
+    total_it: 1000
+  wei**3_pro**2_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.3138328185, end_rmse: 25758.274292669543,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 2, 0]
+    rmse: 25758.274292669543
+    theta: [514682, 272391, 56191, -52888, -59389, 55150]
+    total_it: 1000
+  wei**3_pro**2_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.8039985894, end_rmse: 25743.585196804775,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 2, 1]
+    rmse: 25743.585196804775
+    theta: [515134, 273153, 56071, -53436, -59105, 54969, -1472]
+    total_it: 1000
+  wei**3_pro**2_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.4499724067, end_rmse: 26293.129693927232,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 2, 2]
+    rmse: 26293.129693927232
+    theta: [509843, 272593, 56265, -53048, -59419, 55291, 32240, -32929]
+    total_it: 1000
+  wei**3_pro**2_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.1737854348, end_rmse: 26584.11514576625, max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 2, 3]
+    rmse: 26584.11514576625
+    theta: [507774, 272528, 56377, -52944, -59340, 55451, 34241, -14334, -20535]
+    total_it: 1000
+  wei**3_pro**2_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.9441301366, end_rmse: 26500.78268859069, max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 2, 4]
+    rmse: 26500.78268859069
+    theta: [508083, 272669, 56395, -53001, -59159, 55440, 29587, -11369, -12060, -6562]
+    total_it: 1000
+  wei**3_pro**3_tim**0_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.0933155273, end_rmse: 19883.94596858362, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 21325.9379745735, end_rmse: 12720.272396778846, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12600.438736231477, end_rmse: 9754.384322661976,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10012.558310060376, end_rmse: 9551.207591663819,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 8841.552526230185, end_rmse: 8780.010315622967,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 8815.326202576736, end_rmse: 8805.315594040327,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9308.155941136774, end_rmse: 9305.882806625292,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9051.831973061682, end_rmse: 9051.778150193415,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 3, 0]
+    rmse: 9051.778150193415
+    theta: [542355, 339306, 38690, -99492, -213577, -6240, 226246]
+    total_it: 65000
+  wei**3_pro**3_tim**1_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.5834813121, end_rmse: 19908.484451443866,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 21334.90290943477, end_rmse: 12704.590978404143,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12602.921049263261, end_rmse: 9730.239491469809,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10005.072488652984, end_rmse: 9539.873852051205,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 8844.471659402396, end_rmse: 8784.040932943488,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 8846.515248351103, end_rmse: 8838.661689886449,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9307.633368005965, end_rmse: 9305.150853663155,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9037.689138054782, end_rmse: 9037.733420006909,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 3, 1]
+    rmse: 9037.733420006909
+    theta: [543219, 339391, 38639, -99514, -213486, -6234, 226166, -1810]
+    total_it: 65000
+  wei**3_pro**3_tim**2_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.229455143, end_rmse: 20477.16574031656, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 21515.889960463697, end_rmse: 12865.723339722055,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12747.471021819018, end_rmse: 9844.459329597606,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10063.795572455407, end_rmse: 9564.97977058303,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 8910.94937172811, end_rmse: 8843.30121936462,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 9005.253499694454, end_rmse: 8997.628080111539,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9358.657892331006, end_rmse: 9355.989770325561,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9087.076235810404, end_rmse: 9087.088302652335,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 3, 2]
+    rmse: 9087.088302652335
+    theta: [541057, 339491, 38679, -99635, -213397, -6201, 226063, 10957, -12373]
+    total_it: 65000
+  wei**3_pro**3_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.9532681828, end_rmse: 20823.899045094855,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [3, 3, 3]
+    rmse: 20823.899045094855
+    theta: [516200, 273399, 56277, -53315, -88160, -1515, 98218, 35136, -14343, -20761]
+    total_it: 1000
+  wei**3_pro**3_tim**4_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.723612895, end_rmse: 20748.267597574104, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 21731.992082106786, end_rmse: 12780.282331710925,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12668.815031553751, end_rmse: 9741.766553072111,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10005.349374090454, end_rmse: 9533.202355723817,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 8865.814606406711, end_rmse: 8805.394869996584,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 8864.939300112383, end_rmse: 8863.465104602243,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9336.638248544043, end_rmse: 9333.618552761736,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9039.329661682743, end_rmse: 9039.375378846968,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 3, 4]
+    rmse: 9039.375378846968
+    theta: [542129, 339462, 38673, -99614, -213352, -6233, 226040, 7718, -13831, -3087,
+      8494]
+    total_it: 65000
+  wei**3_pro**4_tim**0_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.9229938927, end_rmse: 14810.96989489759, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 15759.353938141392, end_rmse: 7970.70459289071, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 7719.131572527263, end_rmse: 6206.986795311466, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 6752.334307383977, end_rmse: 6586.078315315832,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5919.993255286878, end_rmse: 5895.325271479384,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5894.147376352872, end_rmse: 5891.234694737134,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 6292.017455740073, end_rmse: 6291.420991235946,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6156.403819475713, end_rmse: 6156.335110599784,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 4, 0]
+    rmse: 6156.335110599784
+    theta: [538297, 338864, 38766, -99223, -158890, -66319, 73272, 175076]
+    total_it: 65000
+  wei**3_pro**4_tim**1_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.4131596889, end_rmse: 14863.580172723441,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 15807.569105455967, end_rmse: 7932.684304668342,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 7696.207112718741, end_rmse: 6156.553659997538, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 6725.1331163902705, end_rmse: 6561.764091028765,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5928.0673859406315, end_rmse: 5906.135091606235,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5910.168232736518, end_rmse: 5907.986249142371,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 6276.080371359078, end_rmse: 6275.480516002181,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6135.8554978387765, end_rmse: 6135.810276145074,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 4, 1]
+    rmse: 6135.810276145074
+    theta: [539222, 338946, 38712, -99244, -158860, -66303, 73261, 175049, -1901]
+    total_it: 65000
+  wei**3_pro**4_tim**2_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.0591335314, end_rmse: 15471.133388109676,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 16070.281853717941, end_rmse: 8194.82967975263, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 7902.214861621877, end_rmse: 6304.232907717623, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 6848.451212765931, end_rmse: 6618.767323215523,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 6025.415748749479, end_rmse: 5992.280447243393,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 6085.912978819891, end_rmse: 6082.021973238135,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 6344.376654636942, end_rmse: 6343.591208532399,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6194.6718425696445, end_rmse: 6194.538373714282,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 4, 2]
+    rmse: 6194.538373714282
+    theta: [537109, 339048, 38752, -99369, -158797, -66242, 73233, 174959, 10514,
+      -11998]
+    total_it: 65000
+  wei**3_pro**4_tim**3_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.7829465822, end_rmse: 15885.037524495836,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 16375.474881479058, end_rmse: 8157.3505560368985,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 7882.793658212802, end_rmse: 6208.172433990839, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 6752.287475143805, end_rmse: 6557.310057393045,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5944.5480118495325, end_rmse: 5920.529080984347,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5953.658724070184, end_rmse: 5952.063524981222,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 6285.697537989296, end_rmse: 6284.963930427806,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6134.107656685347, end_rmse: 6134.040603731239,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 4, 3]
+    rmse: 6134.040603731239
+    theta: [538185, 339069, 38735, -99375, -158750, -66272, 73213, 174967, 5178, -10364,
+      3770]
+    total_it: 65000
+  wei**3_pro**4_tim**4_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.5532913042, end_rmse: 15807.714967255384,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 16346.526717011066, end_rmse: 8031.665833529483,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 7764.322075341768, end_rmse: 6151.639844523729, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 6719.4039563368015, end_rmse: 6550.9529710164325,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 5950.925999259742, end_rmse: 5929.733598404872,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 5924.615837611755, end_rmse: 5924.772787678575,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 6291.032145985684, end_rmse: 6290.289443935945,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6128.526078218071, end_rmse: 6128.452561449591,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [3, 4, 4]
+    rmse: 6128.452561449591
+    theta: [538177, 339015, 38746, -99343, -158789, -66286, 73224, 174996, 7412, -13763,
+      -2975, 8594]
+    total_it: 65000
+  wei**4_pro**0_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.8502019616, end_rmse: 29191.869339641707,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 0, 0]
+    rmse: 29191.869339641707
+    theta: [500368, 271565, 79170, -15174, -65094]
+    total_it: 1000
+  wei**4_pro**0_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.3403676623, end_rmse: 29177.086026855617,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 0, 1]
+    rmse: 29177.086026855617
+    theta: [501344, 272479, 79235, -15521, -65659, -2473]
+    total_it: 1000
+  wei**4_pro**0_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.9863414222, end_rmse: 29706.35141370956, max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 0, 2]
+    rmse: 29706.35141370956
+    theta: [496038, 271945, 79347, -15286, -65423, 30513, -31997]
+    total_it: 1000
+  wei**4_pro**0_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.7101544024, end_rmse: 29941.231764086715,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 0, 3]
+    rmse: 29941.231764086715
+    theta: [494216, 271965, 79450, -15244, -65451, 31943, -14072, -19249]
+    total_it: 1000
+  wei**4_pro**0_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.4804990628, end_rmse: 29833.732538262535,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 0, 4]
+    rmse: 29833.732538262535
+    theta: [494705, 272158, 79490, -15292, -65553, 27170, -11515, -11334, -5446]
+    total_it: 1000
+  wei**4_pro**1_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.3684823383, end_rmse: 28347.904023113537,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 1, 0]
+    rmse: 28347.904023113537
+    theta: [508106, 273122, 79250, -15741, -65998, -16518]
+    total_it: 1000
+  wei**4_pro**1_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.8586480606, end_rmse: 28347.59910910763, max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 1, 1]
+    rmse: 28347.59910910763
+    theta: [508681, 274115, 79355, -16092, -66600, -16132, -2180]
+    total_it: 1000
+  wei**4_pro**1_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.5046218367, end_rmse: 28885.025558014597,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 1, 2]
+    rmse: 28885.025558014597
+    theta: [503426, 273532, 79448, -15853, -66344, -16219, 31450, -32844]
+    total_it: 1000
+  wei**4_pro**1_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.2284348293, end_rmse: 29147.669338807747,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 1, 3]
+    rmse: 29147.669338807747
+    theta: [501323, 273500, 79551, -15791, -66342, -15945, 33400, -14364, -20339]
+    total_it: 1000
+  wei**4_pro**1_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.9987794994, end_rmse: 29057.89669359355, max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 1, 4]
+    rmse: 29057.89669359355
+    theta: [501599, 273673, 79597, -15827, -66431, -15717, 28740, -11451, -11946,
+      -6396]
+    total_it: 1000
+  wei**4_pro**2_tim**0_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643875.0611069347, end_rmse: 25312.230276937487,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 2, 0]
+    rmse: 25312.230276937487
+    theta: [511032, 273604, 79355, -15782, -66118, -59566, 55461]
+    total_it: 1000
+  wei**4_pro**2_tim**1_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.5512726747, end_rmse: 25308.646961318555,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 2, 1]
+    rmse: 25308.646961318555
+    theta: [511417, 274523, 79443, -16124, -66696, -59295, 55284, -1472]
+    total_it: 1000
+  wei**4_pro**2_tim**2_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.1972464661, end_rmse: 25845.578884917635,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 2, 2]
+    rmse: 25845.578884917635
+    theta: [506180, 273953, 79540, -15884, -66442, -59603, 55604, 31963, -32633]
+    total_it: 1000
+  wei**4_pro**2_tim**3_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.9210594713, end_rmse: 26132.016020659976,
+        max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 2, 3]
+    rmse: 26132.016020659976
+    theta: [504140, 273932, 79643, -15826, -66446, -59523, 55759, 33888, -14204, -20297]
+    total_it: 1000
+  wei**4_pro**2_tim**4_:
+    alpha: 0.1
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.691404152, end_rmse: 26048.103343200277, max_iter: 1000}
+    max_iter: 1000
+    power_x: [4, 2, 4]
+    rmse: 26048.103343200277
+    theta: [504451, 274108, 79688, -15865, -66538, -59345, 55747, 29239, -11295, -11917,
+      -6421]
+    total_it: 1000
+  wei**4_pro**3_tim**0_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.8405896269, end_rmse: 19247.571839025626,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 20353.371020355025, end_rmse: 12932.624863544743,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12685.736759484465, end_rmse: 10257.27234846782,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10608.730383770646, end_rmse: 10130.228173159136,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 9408.028671105405, end_rmse: 9336.108450495407,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 9366.507770842647, end_rmse: 9354.901470688092,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9936.95958764245, end_rmse: 9934.654452800798,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9636.313138078931, end_rmse: 9636.022740399623,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 3, 0]
+    rmse: 9636.022740399623
+    theta: [544891, 313059, 60324, -33054, -66471, -213358, -6312, 226143]
+    total_it: 65000
+  wei**4_pro**3_tim**1_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.3307553809, end_rmse: 19284.66597843429, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 20367.923154468597, end_rmse: 12928.303003264265,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12693.916755621785, end_rmse: 10235.289187647828,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10607.308090080593, end_rmse: 10123.454421992974,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 9418.176092658106, end_rmse: 9347.78268241037,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 9395.467672166682, end_rmse: 9385.456666326598,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9932.542875682608, end_rmse: 9930.107614394668,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9621.033777268976, end_rmse: 9620.815844193132,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 3, 1]
+    rmse: 9620.815844193132
+    theta: [545761, 313135, 60265, -33083, -66448, -213266, -6307, 226059, -1814]
+    total_it: 65000
+  wei**4_pro**3_tim**2_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.9767291859, end_rmse: 19844.0636773515, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 20539.00140632604, end_rmse: 13076.356999606318,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12872.390377073812, end_rmse: 10363.570376442825,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10663.376787045187, end_rmse: 10146.334854079985,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 9493.129873686743, end_rmse: 9415.37201792635,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 9547.89197617609, end_rmse: 9537.471048604042,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9978.28998982046, end_rmse: 9975.769751218053,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9673.489550779874, end_rmse: 9673.222338664891,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 3, 2]
+    rmse: 9673.222338664891
+    theta: [543572, 313189, 60345, -33102, -66554, -213177, -6274, 225958, 11156,
+      -12566]
+    total_it: 65000
+  wei**4_pro**3_tim**3_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.7005422028, end_rmse: 20189.546380144824,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 20774.125144410704, end_rmse: 13078.320342071418,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12867.713818019372, end_rmse: 10302.796326749816,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10620.927328499092, end_rmse: 10117.654144222339,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 9439.986208513646, end_rmse: 9367.259566799801,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 9442.983433339508, end_rmse: 9435.189495904282,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9946.634721623126, end_rmse: 9943.990606711253,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9629.418101369507, end_rmse: 9629.205467125501,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 3, 3]
+    rmse: 9629.205467125501
+    theta: [544632, 313199, 60326, -33105, -66541, -213097, -6304, 225908, 5756, -10538,
+      3418]
+    total_it: 65000
+  wei**4_pro**3_tim**4_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.4708868938, end_rmse: 20112.469308813957,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 20756.112701035072, end_rmse: 13000.594235579154,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 12785.837251963449, end_rmse: 10259.342343615546,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 10610.048599015961, end_rmse: 10118.09317040891,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 9446.278936486759, end_rmse: 9375.95286492855,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 9409.08170634899, end_rmse: 9403.911696054287,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 9959.99015247747, end_rmse: 9957.268807441971,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 9625.014628456138, end_rmse: 9624.788467109238,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 3, 4]
+    rmse: 9624.788467109238
+    theta: [544648, 313152, 60330, -33089, -66526, -213132, -6307, 225932, 7852, -13896,
+      -3133, 8485]
+    total_it: 65000
+  wei**4_pro**4_tim**0_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.6702679786, end_rmse: 13853.321265994573,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 14472.325943967178, end_rmse: 8344.975065028808,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 7937.486141996524, end_rmse: 6986.624904869997, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 7559.261622395833, end_rmse: 7373.74313208163,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 6726.0440117225835, end_rmse: 6686.690192563098,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 6739.542330844973, end_rmse: 6733.68196284239,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 7150.372798936694, end_rmse: 7149.992368288645,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6931.372566290847, end_rmse: 6931.12332382525,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 4, 0]
+    rmse: 6931.12332382525
+    theta: [540837, 312670, 60350, -32903, -66348, -158714, -66381, 73219, 175060]
+    total_it: 65000
+  wei**4_pro**4_tim**1_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643874.160433744, end_rmse: 13924.149253457805, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 14530.778719780383, end_rmse: 8324.735359120266,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 7922.6111607147495, end_rmse: 6941.845427912959,
+        max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 7544.356372464132, end_rmse: 7357.715117665413,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 6743.8864099820175, end_rmse: 6707.861306364134,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 6752.594520562108, end_rmse: 6747.043901086546,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 7130.554472962519, end_rmse: 7130.256348798068,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6910.182702947791, end_rmse: 6909.923908424648,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 4, 1]
+    rmse: 6909.923908424648
+    theta: [541771, 312742, 60289, -32933, -66323, -158680, -66366, 73205, 175031,
+      -1908]
+    total_it: 65000
+  wei**4_pro**4_tim**2_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.8064075606, end_rmse: 14535.485822473745,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 14789.980255621642, end_rmse: 8559.63634080477, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8179.111654711066, end_rmse: 7102.21829407343, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 7655.458096153888, end_rmse: 7407.948397603234,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 6846.681305852643, end_rmse: 6800.093535917308,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 6910.124733359593, end_rmse: 6902.402828760306,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 7188.03630425055, end_rmse: 7187.745505477292,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6970.550781820037, end_rmse: 6970.199389598892,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 4, 2]
+    rmse: 6970.199389598892
+    theta: [539629, 312797, 60368, -32953, -66430, -158620, -66304, 73178, 174941,
+      10714, -12193]
+    total_it: 65000
+  wei**4_pro**4_tim**3_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.5302205883, end_rmse: 14959.383924697231,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 15108.309348783598, end_rmse: 8531.901185686256,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8159.578455829837, end_rmse: 7010.733257224027, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 7572.328365624379, end_rmse: 7354.346821706557,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 6767.607047802179, end_rmse: 6729.437883748407,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 6792.076030498497, end_rmse: 6786.0828364710005,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 7138.890960827606, end_rmse: 7138.6218513255935,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6912.679321872106, end_rmse: 6912.382435491337,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 4, 3]
+    rmse: 6912.382435491337
+    theta: [540703, 312805, 60347, -32955, -66415, -158573, -66336, 73158, 174949,
+      5357, -10440, 3675]
+    total_it: 65000
+  wei**4_pro**4_tim**4_:
+    alpha: 1.0000000000000004e-06
+    historic:
+    - - {alpha: 0.1, begin_rmse: 643873.3005652891, end_rmse: 14878.431227553994,
+        max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 15077.11463755019, end_rmse: 8416.61366375539, max_iter: 1000}
+    - - {alpha: 0.1, begin_rmse: 8031.805896563394, end_rmse: 6955.984654420822, max_iter: 1000}
+    - - {alpha: 0.010000000000000002, begin_rmse: 7543.790400827038, end_rmse: 7349.873465318676,
+        max_iter: 2000}
+    - - {alpha: 0.0010000000000000002, begin_rmse: 6774.9476136530875, end_rmse: 6739.758686336782,
+        max_iter: 4000}
+    - - {alpha: 0.00010000000000000003, begin_rmse: 6759.068209407537, end_rmse: 6754.423572366079,
+        max_iter: 8000}
+    - - {alpha: 1.0000000000000004e-05, begin_rmse: 7144.504808488687, end_rmse: 7144.339070125277,
+        max_iter: 16000}
+    - - {alpha: 1.0000000000000004e-06, begin_rmse: 6906.731978408801, end_rmse: 6906.440820310147,
+        max_iter: 32000}
+    max_iter: 32000
+    power_x: [4, 4, 4]
+    rmse: 6906.440820310147
+    theta: [540703, 312758, 60351, -32942, -66397, -158612, -66349, 73170, 174976,
+      7545, -13830, -3019, 8584]
+    total_it: 65000
