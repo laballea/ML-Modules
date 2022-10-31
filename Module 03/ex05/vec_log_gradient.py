@@ -110,13 +110,4 @@ def vec_log_gradient(x, y, theta):
     y_hat = logistic_predict_(x, theta)
     x = add_intercept(x)
     return (1 / m) * (x.T.dot(y_hat - y))
-
-    gradient = np.zeros((n + 1, 1))
-    gradient[0] = (1 / m) * sum(y_hat - y)
-    for j in range(1, n + 1):
-        sum_ = 0
-        for i in range(m):
-            sum_ = sum_ + (y_hat[i] - y[i]) * x[i][j - 1]
-        gradient[j] = (1 / m) * sum_
-    return gradient
     
