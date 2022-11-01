@@ -44,3 +44,47 @@ print(f1_score_(y, y_hat))
 print(f1_score(y, y_hat))
 """## Output:
 0.5"""
+
+# Example 2:
+y_hat = np.array(['norminet', 'dog', 'norminet', 'norminet', 'dog', 'dog', 'dog', 'dog'])
+y = np.array(['dog', 'dog', 'norminet', 'norminet', 'dog', 'norminet', 'dog', 'norminet'])
+
+# Accuracy
+## your implementation
+print(accuracy_score_(y, y_hat))
+"""## Output:
+0.625"""
+## sklearn implementation
+print(accuracy_score(y, y_hat))
+"""## Output:
+0.625"""
+
+# Precision
+## your implementation
+print(precision_score_(y, y_hat, pos_label='dog'))
+"""## Output:
+0.6"""
+## sklearn implementation
+print(precision_score(y, y_hat, pos_label='dog'))
+"""## Output:
+0.6"""
+
+# Recall
+## your implementation
+print(recall_score_(y, y_hat, pos_label='dog'))
+"""## Output:
+0.75"""
+## sklearn implementation
+print(recall_score(y, y_hat, pos_label='dog'))
+"""## Output:
+0.75"""
+
+# F1-score
+## your implementation
+print(f1_score_(y, y_hat, pos_label='dog'))
+"""## Output:
+0.6666666666666665"""
+## sklearn implementation
+print(f1_score(y, y_hat, pos_label='dog'))
+"""## Output:
+0.666666666666666"""

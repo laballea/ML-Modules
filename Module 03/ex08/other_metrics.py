@@ -6,15 +6,17 @@ def perf_measure(y, y_hat):
     FP = 0
     TN = 0
     FN = 0
-
+    y = np.reshape(y, (len(y)))
+    y_hat = np.reshape(y_hat, (len(y_hat)))
+    types = list(dict.fromkeys(y))
     for i in range(len(y_hat)): 
-        if y[i]==y_hat[i]==1:
+        if y[i]==y_hat[i]==types[0]:
            TP += 1
-        if y_hat[i]==1 and y[i]!=y_hat[i]:
+        if y_hat[i]==types[0] and y[i]!=y_hat[i]:
            FP += 1
-        if y[i]==y_hat[i]==0:
+        if y[i]==y_hat[i]==types[1]:
            TN += 1
-        if y_hat[i]==0 and y[i]!=y_hat[i]:
+        if y_hat[i]==types[1] and y[i]!=y_hat[i]:
            FN += 1
 
     return(TP, FP, TN, FN)
