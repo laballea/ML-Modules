@@ -1,16 +1,6 @@
 import numpy as np
+from ml42.utils_ml import intercept_
 
-def add_intercept(x, type=1):
-    if (not isinstance(x, np.ndarray)):
-        return None
-    if (len(x.shape) == 1):
-        x = np.reshape(x, (x.shape[0], 1))
-    shape = x.shape
-    if (type == 1):
-        x = np.insert(x, 0, np.ones(x.shape[0]), axis=1)
-    elif (type == 0):
-        x = np.insert(x, 0, np.zeros(x.shape[0]), axis=1)
-    return np.reshape(x, (shape[0], shape[1] + 1))
 
 def sigmoid_(x):
     """
@@ -52,6 +42,5 @@ def logistic_predict_(x, theta):
     if x.shape[1] != theta.shape[0] - 1:
         print("Invalid shape !")
         return None
-    x = add_intercept(x)
+    x = intercept_(x)
     return sigmoid_(x.dot(theta))
-    

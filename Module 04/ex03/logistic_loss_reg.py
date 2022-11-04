@@ -7,7 +7,7 @@ def regularization(function):
         m, n = y.shape
         theta = np.reshape(theta, (len(theta), ))
         l2 = float(theta[1:].T.dot(theta[1:]))
-        return ret + + ((lambda_ / (2 * m)) * l2)
+        return ret + ((lambda_ / (2 * m)) * l2)
     return new_function
 
 @regularization

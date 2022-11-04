@@ -4,10 +4,11 @@ import pandas as pd
 from tqdm import tqdm
 from ml42.utils_ml import data_spliter
 from ml42.utils_ml import add_polynomial_features
-from ml42.mylinearregression import MyLinearRegression as myLR
+from ml42.ridge import MyRidge
 from ml42.utils_ml import normalize
+from ml42.utils_ml import cross_validation
 import yaml
-import itertools
+import math
 import sys, getopt
 
 def plot2d_prediction(act_prices, predicted_prices, title, x_labels, y_labels):
@@ -26,7 +27,8 @@ def init_models(yml_models, data):
     yml_models["data"]["quartil"] = [-1, -1, -1]
     yml_models["data"]["best_model"] = None
     pow = range(1, yml_models["data"]["max_poly"] + 1)
-    combinations = np.array(list(itertools.product(list(itertools.product(pow)), repeat=len(x_head))))
+    # combinations = np.array(list(itertools.product(list(itertools.product(pow)), repeat=len(x_head)))) # all combinations too long
+    combinations = [np.full((len(x_head), 1), po) for po in pow]
     for comb in combinations:
         name =''.join(["{}**{}_".format(x_name[:3], str(po[0])) for x_name, po in zip(x_head, comb)])
         yml_x = list([int(po[0]) for po in comb])
@@ -34,47 +36,45 @@ def init_models(yml_models, data):
             yml_theta = [1 for _ in range(sum(yml_x) + 1)]
             yml_models["models"][name] = {
                 "power_x":yml_x,
-                "theta":yml_theta,
                 "rmse":None,
-                "historic":[],
                 "total_it":0,
                 "alpha":1e-1,
+                "historic":{},
+                "theta": {}
             }
+            for lambda_ in tqdm(np.arange(0.2, 1.2, 0.2), leave=False):
+                yml_models["models"][name]["historic"][str(lambda_)] = []
+                yml_models["models"][name]["theta"][str(lambda_)] = [1 for _ in range(sum(yml_x) + 1)]
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
 
 def train_models(yml_models, data, alpha, rate):
     X = np.array(data[yml_models["data"]["x_head"]])
     Y = np.array(data[yml_models["data"]["y_head"]])
-    x_train, x_test, y_train, y_test = data_spliter(X, Y, 0.9)
-    x_test = normalize(x_test)
-    y_test = y_test
-    x = normalize(x_train)
-    y = y_train
+    X = normalize(X)
+
 
     for models_name in tqdm(yml_models["models"], leave=False):
         models = yml_models["models"][models_name]
-        x_ = add_polynomial_features(x, models["power_x"])
-        x_test_ = add_polynomial_features(x_test, models["power_x"])
-        theta = np.array(models["theta"]).reshape(-1, 1)
         quartil = yml_models["data"]["quartil"]
-        if (quartil[1] != -1 and models["rmse"] > quartil[1]):
-            continue
-        my_lr = myLR(theta, alpha, rate)
-        bg_rmse = my_lr.rmse_(y_test, my_lr.predict_(x_test_))
-        historic = my_lr.fit_(x_, y, historic_bl=True)
-        end_rmse = my_lr.rmse_(y_test, my_lr.predict_(x_test_))
-        models["rmse"] = end_rmse
-        models["theta"] = [int(tta) for tta in my_lr.theta]
+        for lambda_ in tqdm(np.arange(0.2, 1.2, 0.2), leave=False):
+            theta = np.array(models["theta"][str(lambda_)]).reshape(-1, 1)
+            X_poly = add_polynomial_features(X, models["power_x"])
+            for k_folds in tqdm(cross_validation(X_poly, Y, 10), leave=False):
+                my_lr = MyRidge(theta, alpha, rate, lambda_)
+                x_train, y_train, x_test, y_test = k_folds
+                historic = my_lr.fit_(x_train, y_train, historic_bl=True)
+                models["historic"][str(lambda_)] = models["historic"][str(lambda_)] + historic
+            models["theta"][str(lambda_)] = [int(tta) for tta in my_lr.theta]
+        models["rmse"] = float(math.sqrt(np.mean([models["historic"][lambda_].pop() for lambda_ in models["historic"]])))
         models["total_it"] = int(models["total_it"]) + rate
-        models["historic"] = models["historic"] + historic
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
 
 def best_models(yml_models):
     rmse_list = np.array([[str(key), float(value["rmse"])] for key, value in yml_models["models"].items()])
-    yml_models["data"]["best_model"] = str(rmse_list[rmse_list[:,1].astype('float64').argmin()][0])
-    yml_models["data"]["quartil"] = [float(np.quantile(rmse_list[:,1].astype('float64'), quart)) for quart in np.arange(0.25, 1, 0.25)]
+    yml_models["data"]["best_model"] = str(rmse_list[rmse_list[:, 1].astype('float64').argmin()][0])
+    yml_models["data"]["quartil"] = [float(np.quantile(rmse_list[:, 1].astype('float64'), quart)) for quart in np.arange(0.25, 1, 0.25)]
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
 
@@ -84,31 +84,23 @@ def train(yml_models, data, max_range=3, init=False, alpha=0.1, rate=1000):
             train_models(yml_models, data, alpha, rate)
             best_models(yml_models)
     else:
-        for _ in tqdm(range(0, max_range)):
-            train_models(yml_models, data, alpha, rate)
+        train_models(yml_models, data, alpha, rate)
         best_models(yml_models)
 
 def display(yml_models, data):
-    arr = np.array([[int(value["power_x"][0]), int(value["power_x"][1]),int(value["power_x"][2]),int(value["rmse"])] for key, value in yml_models["models"].items()])
-    fig = plt.figure()
-    ax = fig.add_subplot(projection='3d')
-    img = ax.scatter(arr[:,0],arr[:,1],arr[:,2], c=arr[:,3], cmap=plt.hot()) 
-    for i in range(len(arr)): #plot each point + it's index as text above
-        ax.text(arr[i,0],arr[i,1],arr[i,2],  '%s' % (str(i)), size=5, zorder=1) 
-    fig.colorbar(img)
-    ax.set_xlabel('weight')
-    ax.set_ylabel('prod_distance')
-    ax.set_zlabel('time_delivery')
-
     fig = plt.figure()
     ax = fig.add_subplot()
-    for key, model in yml_models["models"].items():
-        if (model["rmse"] < yml_models["data"]["quartil"][0]):
-            ax.plot(np.arange(int(model["total_it"])), np.sqrt(model["historic"]), label=key)
+    clr_lst = ["red", "blue", "green", "cyan"]
+    for values, clr in zip(yml_models["models"].items(), clr_lst):
+        key, model = values
+        for lambda_ in model["historic"]:
+            ax.plot(np.arange(len(model["historic"][lambda_])), np.sqrt(model["historic"][lambda_]), color=clr, label=key)
+            # break
     ax.set_xlabel("number iteration")
-    ax.set_ylabel("mse")
+    ax.set_ylabel("rmse")
+    ax.legend()
     plt.show()
-        
+
 
 def main(argv):
     try:
@@ -131,7 +123,6 @@ def main(argv):
     for opt, arg in opts:
         if opt == '--reset':
             init_models(yml_models, data)
-            train(yml_models, data, init=True, alpha=alpha, rate=rate)
         elif opt == '--train':
             train(yml_models, data, alpha=alpha, rate=rate)
         elif opt == '--display':

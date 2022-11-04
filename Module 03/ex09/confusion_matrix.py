@@ -41,6 +41,5 @@ def confusion_matrix_(y, y_hat, labels=None, df_option=False):
 
 
     except Exception as inst:
-        raise inst
         print(inst)
         return None

@@ -1,6 +1,6 @@
 import numpy as np
-from log_loss import log_loss_
-from utils.log_pred import logistic_predict_
+from log_loss import log_loss_, logistic_predict_
+
 
 # Example 1:
 y1 = np.array([1]).reshape((-1, 1))

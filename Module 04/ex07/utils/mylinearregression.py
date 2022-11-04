@@ -37,7 +37,7 @@ class MyLinearRegression():
         x = self.add_intercept(x, 1).T
         return np.array(fct * (x.dot((x_hat - y))))
 
-    def fit_(self, x, y):
+    def fit_(self, x, y, historic_bl=False):
         if (not isinstance(y, np.ndarray)):
             return None
         if (not isinstance(x, np.ndarray)):
@@ -48,16 +48,14 @@ class MyLinearRegression():
             return None
         if (not isinstance(self.max_iter, int) and self.max_iter > 0):
             return None
+        historic = []
         for _ in tqdm(range(self.max_iter), leave=False):
             grdt = self.simple_gradient(x, y)
-            if (np.isnan(np.sum(grdt))):
-                print("NaN gradient !")
-                return None
-            if (np.isinf(np.sum(grdt))):
-                print("inf gradient !")
-                return None
             self.theta = self.theta - (grdt * self.alpha)
-        return self
+            mse = int(self.mse_(y, self.predict_(x)))
+            if (historic_bl == True):
+                historic.append(mse)
+        return historic
 
     def predict_(self, x):
         if (not isinstance(x, np.ndarray) or not isinstance(self.theta, np.ndarray)):

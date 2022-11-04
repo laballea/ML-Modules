@@ -1,6 +1,28 @@
 import math
 import numpy as np
+from ml42.utils_ml import intercept_
 
+def sigmoid_(x):
+    if (not isinstance(x, np.ndarray)):
+        print("Invalid type !")
+        return None
+    if x.size == 0:
+        print("Empty array !")
+        return None
+    return 1 / (1 + np.exp(-x))
+
+def logistic_predict_(x, theta):
+    if (not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
+        print("Invalid type !")
+        return None
+    if x.size == 0 or theta.size == 0:
+        print("Empty array !")
+        return None
+    if x.shape[1] != theta.shape[0] - 1:
+        print("Invalid shape !")
+        return None
+    x = intercept_(x)
+    return sigmoid_(x.dot(theta))
 
 def log_loss_(y, y_hat, eps=1e-15):
     """

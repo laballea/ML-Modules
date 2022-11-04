@@ -1,0 +1,14 @@
+[project]
+name = "ml42"
+version = "1.0"
+authors = [
+  { name="ABALLEA" },
+]
+description = "machine learning packages"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

@@ -1,14 +1,11 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
-import math
 import yaml
 import sys, getopt
-from utils.data_spliter import data_spliter
-from utils.polynomial_model import add_polynomial_features
-from utils.my_logistic_regression import MyLogisticRegression as myLR
-from utils.normalize import normalize
+from ml42.utils_ml import data_spliter
+from ml42.mylogisticregression import MyLogisticRegression as myLR
+from ml42.utils_ml import normalize
 
 def display(x, y, y_hat):
     error = np.mean(y != y_hat) * 100
