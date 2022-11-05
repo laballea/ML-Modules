@@ -45,7 +45,7 @@ def exec(slr_planets, slr_):
         cp_y_train = format(y_train, zipcode)
         x_test = normalize(x_test)
         x_train = normalize(x_train)
-        my_lr = myLR(np.ones(X.shape[1] + 1).reshape(-1, 1), 0.01, 50000)
+        my_lr = myLR(np.ones(X.shape[1] + 1).reshape(-1, 1), 0.01, 50000, lambda_=0)
         my_lr.fit_(x_train, cp_y_train)
         y_hat = my_lr.predict_(x_n)
         result[zipcode] = y_hat.reshape(len(y_hat))

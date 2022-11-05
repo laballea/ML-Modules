@@ -12,7 +12,7 @@ from ml42.utils_ml import normalize
 def train_model(yml_models, data, alpha, rate):
     X = np.array(data[yml_models["data"]["x_head"]])
     Y = np.array(data[yml_models["data"]["y_head"]])
-    x_train, x_test, y_train, y_test = data_spliter(X, Y, 0.9)
+    x_train, x_test, y_train, y_test = data_spliter(X, Y, 0.7)
     x_test = normalize(x_test)
     x = normalize(x_train)
     y = y_train

@@ -11,16 +11,6 @@ import yaml
 import math
 import sys, getopt
 
-def plot2d_prediction(act_prices, predicted_prices, title, x_labels, y_labels):
-    figure, axis = plt.subplots(len(x_labels), 1, constrained_layout=True)
-    figure.suptitle(title, fontsize=16)
-    labels = ["real price", "predicted price"]
-    for idx, label in enumerate(x_labels):
-        axis[idx].scatter(act_prices[0][:,idx], act_prices[1], marker='o', color="b", label=labels[0])
-        axis[idx].scatter(predicted_prices[0][:,idx], predicted_prices[1], marker='.', color="orange", label=labels[1])
-        axis[idx].set_xlabel(label)
-        axis[idx].set_ylabel(y_labels)
-        axis[idx].legend()
 
 def init_models(yml_models, data):
     x_head = yml_models["data"]["x_head"]
@@ -53,10 +43,8 @@ def train_models(yml_models, data, alpha, rate):
     Y = np.array(data[yml_models["data"]["y_head"]])
     X = normalize(X)
 
-
     for models_name in tqdm(yml_models["models"], leave=False):
         models = yml_models["models"][models_name]
-        quartil = yml_models["data"]["quartil"]
         for lambda_ in tqdm(np.arange(0.2, 1.2, 0.2), leave=False):
             theta = np.array(models["theta"][str(lambda_)]).reshape(-1, 1)
             X_poly = add_polynomial_features(X, models["power_x"])
@@ -65,7 +53,7 @@ def train_models(yml_models, data, alpha, rate):
                 x_train, y_train, x_test, y_test = k_folds
                 historic = my_lr.fit_(x_train, y_train, historic_bl=True)
                 models["historic"][str(lambda_)] = models["historic"][str(lambda_)] + historic
-            models["theta"][str(lambda_)] = [int(tta) for tta in my_lr.theta]
+            models["theta"][str(lambda_)] = [tta for tta in my_lr.theta]
         models["rmse"] = float(math.sqrt(np.mean([models["historic"][lambda_].pop() for lambda_ in models["historic"]])))
         models["total_it"] = int(models["total_it"]) + rate
     with open(yml_models["data"]["name"], 'w') as outfile:
@@ -78,14 +66,9 @@ def best_models(yml_models):
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
 
-def train(yml_models, data, max_range=3, init=False, alpha=0.1, rate=1000):
-    if (init):
-        for _ in tqdm(range(0, max_range)):
-            train_models(yml_models, data, alpha, rate)
-            best_models(yml_models)
-    else:
-        train_models(yml_models, data, alpha, rate)
-        best_models(yml_models)
+def train(yml_models, data, alpha=0.1, rate=1000):
+    train_models(yml_models, data, alpha, rate)
+    best_models(yml_models)
 
 def display(yml_models, data):
     fig = plt.figure()

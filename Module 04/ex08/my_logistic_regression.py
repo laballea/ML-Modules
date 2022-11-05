@@ -1,6 +1,6 @@
 import numpy as np
 from tqdm import tqdm
-from .utils_ml import intercept_
+from ml42.utils_ml import intercept_
 
 class MyLogisticRegression():
     """
