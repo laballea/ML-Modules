@@ -1,5 +1,7 @@
 import numpy as np
 from mylinearregression import MyLinearRegression as MyLR
+
+
 X = np.array([[1., 1., 2., 3.], [5., 8., 13., 21.], [34., 55., 89., 144.]])
 Y = np.array([[23.], [48.], [218.]])
 mylr = MyLR([[1.], [1.], [1.], [1.], [1]])
@@ -18,7 +20,7 @@ mylr.alpha = 1.6e-4
 mylr.max_iter = 200000
 mylr.fit_(X, Y)
 print(mylr.thetas)
-# Output: array([[18.188..], [2.767..], [-0.374..], [1.392..], [0.017..]])
+# Output: array([[18.8188..], [2.767..], [-0.374..], [1.392..], [0.017..]])
 # Example 4:
 y_hat = mylr.predict_(X)
 print(y_hat)

@@ -25,9 +25,9 @@ def data_spliter(x, y, proportion):
         return None
     arr = np.concatenate((x, y), axis=1)
     N = len(y)
-    X = arr[:,:x.shape[1]]
-    Y = arr[:,x.shape[1]]
-    sample = int(proportion*N)
+    X = arr[:, :x.shape[1]]
+    Y = arr[:, x.shape[1]]
+    sample = int(proportion * N)
     np.random.shuffle(arr)
-    x_train, x_test, y_train, y_test = np.array(X[:sample,:]), np.array(X[sample:, :]), np.array(Y[:sample, ]), np.array(Y[sample:,])
+    x_train, x_test, y_train, y_test = np.array(X[:sample, :]), np.array(X[sample:, :]), np.array(Y[:sample, ]), np.array(Y[sample:, ])
     return (x_train, x_test, y_train, y_test)

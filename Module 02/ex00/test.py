@@ -1,7 +1,7 @@
 import numpy as np
 from prediction import simple_predict
 
-x = np.arange(1,13).reshape((4,-1))
+x = np.arange(1, 13).reshape((4, -1))
 # Example 1:
 theta1 = np.array([5, 0, 0, 0]).reshape((-1, 1))
 print(simple_predict(x, theta1))
@@ -10,7 +10,6 @@ print(simple_predict(x, theta1))
 
 # Example 2:
 theta2 = np.array([0, 1, 0, 0]).reshape((-1, 1))
-print(x, theta2)
 print(simple_predict(x, theta2))
 # Output:  array([[ 1.], [ 4.], [ 7.], [10.]])
 

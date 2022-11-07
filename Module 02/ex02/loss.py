@@ -23,4 +23,4 @@ def loss_(y, y_hat):
     y_hat = y_hat.reshape(len(y_hat),)
     diff = y - y_hat
     fct = (1 / (2 * len(y)))
-    return fct * diff.dot(diff.T)
+    return float(fct * diff.T.dot(diff))

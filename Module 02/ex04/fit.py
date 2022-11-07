@@ -2,14 +2,19 @@ from matplotlib import pyplot as plt
 import numpy as np
 from tqdm import tqdm
 
+
 def add_intercept(x):
-    if (not isinstance(x, np.ndarray)):
+    try:
+        if (not isinstance(x, np.ndarray)):
+            print("intercept_ invalid type")
+            return None
+        if (len(x.shape) == 1):
+            x = np.reshape(x, (x.shape[0], 1))
+        return np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
+    except Exception as inst:
+        print(inst)
         return None
-    if (len(x.shape) == 1):
-        x = np.reshape(x, (x.shape[0], 1))
-    shape = x.shape
-    x = np.insert(x, 0, np.ones(x.shape[0]), axis=1)
-    return np.reshape(x, (shape[0], shape[1] + 1))
+
 
 def predict_(x, theta):
     if (not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
@@ -20,6 +25,7 @@ def predict_(x, theta):
         return None
     x = add_intercept(x)
     return x.dot(theta)
+
 
 def gradient(x, y, theta):
     if (not isinstance(y, np.ndarray) or not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
@@ -32,6 +38,7 @@ def gradient(x, y, theta):
     x_hat = predict_(x, theta)
     x = add_intercept(x).T
     return np.array(fct * (x.dot((x_hat - y))))
+
 
 def fit_(x, y, theta, alpha, max_iter):
     """
@@ -53,9 +60,7 @@ def fit_(x, y, theta, alpha, max_iter):
     Raises:
     This function should not raise any Exception.
     """
-    if (not isinstance(y, np.ndarray)):
-        return None
-    if (not isinstance(x, np.ndarray)):
+    if (not isinstance(y, np.ndarray) or not isinstance(x, np.ndarray)):
         return None
     if (not isinstance(theta, np.ndarray)):
         return None
@@ -67,4 +72,3 @@ def fit_(x, y, theta, alpha, max_iter):
         grdt = gradient(x, y, theta)
         theta = theta - (grdt * alpha)
     return theta
-

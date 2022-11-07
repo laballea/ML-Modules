@@ -1,13 +1,18 @@
 import numpy as np
 
+
 def add_intercept(x):
-    if (not isinstance(x, np.ndarray)):
+    try:
+        if (not isinstance(x, np.ndarray)):
+            print("intercept_ invalid type")
+            return None
+        if (len(x.shape) == 1):
+            x = np.reshape(x, (x.shape[0], 1))
+        return np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
+    except Exception as inst:
+        print(inst)
         return None
-    if (len(x.shape) == 1):
-        x = np.reshape(x, (x.shape[0], 1))
-    shape = x.shape
-    x = np.insert(x, 0, np.ones(x.shape[0]), axis=1)
-    return np.reshape(x, (shape[0], shape[1] + 1))
+
 
 def predict_(x, theta):
     """Computes the prediction vector y_hat from two non-empty numpy.array.

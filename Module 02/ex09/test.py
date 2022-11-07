@@ -12,11 +12,11 @@ print(data_spliter(x1, y, 0.8))
 data_spliter(x1, y, 0.5)
 # Output:
 """(array([59, 10]), array([ 1, 300, 42]), array([0, 1]), array([0, 0, 1]))"""
-x2 = np.array([[ 1, 42],
-[300, 10],
-[ 59, 1],
-[300, 59],
-[ 10, 42]])
+x2 = np.array([[1, 42],
+               [300, 10],
+               [59, 1],
+               [300, 59],
+               [10, 42]])
 y = np.array([0, 1, 0, 1, 0]).reshape((-1, 1))
 # Example 3:
 print(data_spliter(x2, y, 0.8))

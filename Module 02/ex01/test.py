@@ -1,7 +1,7 @@
 import numpy as np
 from prediction import predict_
 
-x = np.arange(1,13).reshape((4,-1))
+x = np.arange(1, 13).reshape((4, -1))
 # Example 1:
 theta1 = np.array([5, 0, 0, 0]).reshape((-1, 1))
 print(predict_(x, theta1))

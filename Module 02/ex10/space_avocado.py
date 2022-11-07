@@ -1,14 +1,15 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
 import math
 import yaml
-import sys, getopt
+import sys
+import getopt
 from ml42.utils_ml import data_spliter
 from ml42.utils_ml import add_polynomial_features
 from ml42.mylinearregression import MyLinearRegression as myLR
 from ml42.utils_ml import normalize
+
 
 def train_model(yml_models, data, alpha, rate):
     X = np.array(data[yml_models["data"]["x_head"]])
@@ -30,6 +31,7 @@ def train_model(yml_models, data, alpha, rate):
     models["historic"] = models["historic"] + historic
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
+
 
 def display(yml_models, data):
     X = np.array(data[yml_models["data"]["x_head"]])
@@ -55,6 +57,7 @@ def display(yml_models, data):
     ax.set_xlabel("number iteration")
     ax.set_ylabel("mse")
     plt.show()
+
 
 def train(yml_models, data, alpha=0.1, rate=1000):
     train_model(yml_models, data, alpha, rate)
@@ -83,6 +86,7 @@ def main(argv):
             train(yml_models, data, alpha=alpha, rate=rate)
         elif opt == '--display':
             display(yml_models, data)
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
