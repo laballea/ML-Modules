@@ -18,6 +18,7 @@ class TinyStatistician():
             return float(sum(x) / len(x))
         except Exception:
             return None
+
     def median(self, x):
         """
             computes the median of a given non-empty list or array x. The method
@@ -31,6 +32,7 @@ class TinyStatistician():
                 return float((x[int(len(x) / 2)] + x[int(len(x) / 2 - 1)]) / 2)
         except Exception:
             return None
+
     def quartile(self, x):
         """
             computes the 1st and 3rd quartiles of a given non-empty array x.
@@ -41,6 +43,7 @@ class TinyStatistician():
             return [float(x[int((len(x) + 3) / 4) - 1]), float(x[int((3 * len(x) + 1) / 4) - 1])]
         except Exception:
             return None
+
     def percentile(self, x, p):
         """
             computes the expected percentile of a given non-empty list or
@@ -61,6 +64,7 @@ class TinyStatistician():
             return d0+d1
         except Exception:
             return None
+
     def var(self, x):
         """
             computes the variance of a given non-empty list or array x, using a for-
@@ -74,6 +78,7 @@ class TinyStatistician():
             return var / len(x)
         except Exception:
             return None
+
     def std(self, x):
         """
             computes the standard deviation of a given non-empty list or array x,
@@ -83,25 +88,3 @@ class TinyStatistician():
             return math.sqrt(self.var(x))
         except Exception:
             return None
-
-tstat = TinyStatistician()
-a = [1, 42, 300, 10, 59]
-print(tstat.mean(a))
-# Expected result: 82.4
-print(tstat.median(a))
-# Expected result: 42.0
-print(tstat.quartile(a))
-# Expected result: [10.0, 59.0]
-print(tstat.var(a))
-# Expected result: 12279.439999999999
-print(tstat.std(a))
-# Expected result: 110.8126346586886
-print(tstat.percentile(a, 3))
-print(tstat.percentile(a, 10))
-# Output 4.6
-print(tstat.percentile(a, 15))
-# Output: 6.4
-print(tstat.percentile(a, 20))
-# Output: 8.2
-print(tstat.percentile(a, 50))
-# Output: 42

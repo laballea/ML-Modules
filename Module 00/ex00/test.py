@@ -62,7 +62,6 @@ class TestVector(unittest.TestCase):
         with self.assertRaises(NotImplementedError):
             5 / v1
         print(bcolors.OKGREEN + "VECTOR DIV TEST SUCCESS" + bcolors.ENDC)
-        
 
     def test_add(self):
         v1 = Vector([[0.0], [1.0], [2.0], [3.0]])
@@ -99,7 +98,7 @@ class TestVector(unittest.TestCase):
         with self.assertRaises(TypeError):
             v1 = v1 - 5
         print(bcolors.OKGREEN + "VECTOR SUB TEST SUCCESS" + bcolors.ENDC)
-    
+
     def test_T(self):
         v1 = Vector([[0.0], [1.0], [2.0], [3.0]])
         self.assertEqual(v1.T().values, [[0.0, 1.0, 2.0, 3.0]])
@@ -113,7 +112,7 @@ class TestVector(unittest.TestCase):
         v2 = Vector([[1.0], [2.0], [3.0], [4.0]])
         self.assertEqual(v1.dot(v2), 20)
         print(bcolors.OKGREEN + "VECTOR DOT TEST SUCCESS" + bcolors.ENDC)
-    
+
 
 class TestMatrix(unittest.TestCase):
     def test_T(self):
@@ -123,7 +122,7 @@ class TestMatrix(unittest.TestCase):
 
         self.assertEqual(m2.T().data, m1.data)
         print(bcolors.OKGREEN + "MATRIX TRANSPOSE TEST SUCCESS" + bcolors.ENDC)
-    
+
     def test_ADD(self):
         v1 = Vector([[0., 2., 4.]])
         m1 = Matrix([[0.0, 1.0], [2.0, 3.0], [4.0, 5.0]])
@@ -138,7 +137,7 @@ class TestMatrix(unittest.TestCase):
         res = m1 + m2
         self.assertEqual(res.data, [[4.0, 10.0], [4.0, 0.0], [13.0, 5.0]])
         print(bcolors.OKGREEN + "MATRIX ADD TEST SUCCESS" + bcolors.ENDC)
-    
+
     def test_SUB(self):
         v1 = Vector([[0., 2., 4.]])
         m1 = Matrix([[0.0, 1.0], [2.0, 3.0], [4.0, 5.0]])
@@ -153,7 +152,7 @@ class TestMatrix(unittest.TestCase):
         res = m1 - m2
         self.assertEqual(res.data, [[-4.0, -8.0], [0.0, 6.0], [-5.0, 5.0]])
         print(bcolors.OKGREEN + "MATRIX SUB TEST SUCCESS" + bcolors.ENDC)
-    
+
     def test_DIV(self):
         m1 = Matrix([[1.0, 1.0], [2.0, 3.0], [4.0, 5.0]])
         v1 = Vector([[0., 2., 4.]])
@@ -190,11 +189,12 @@ class TestMatrix(unittest.TestCase):
         self.assertEqual(res.data, [[20.0], [26.0]])
         print(bcolors.OKGREEN + "MATRIX MULT TEST SUCCESS" + bcolors.ENDC)
 
+
 def main():
     m1 = Matrix([[0.0, 1.0], [2.0, 3.0], [4.0, 5.0]])
     print(m1.shape)  # Output: (3, 2)
     print(m1.T())  # Output:  Matrix([[0., 2., 4.], [1., 3., 5.]])
-    print(m1.T().shape) # Output  (2, 3)
+    print(m1.T().shape)  # Output  (2, 3)
 
     m1 = Matrix([[0., 2., 4.], [1., 3., 5.]])
     print(m1.shape)  # Output:  (2, 3)
@@ -207,7 +207,7 @@ def main():
                  [2.0, 3.0],
                  [4.0, 5.0],
                  [6.0, 7.0]])
-    print(m1 * m2) # Output:  Matrix([[28., 34.], [56., 68.]])
+    print(m1 * m2)  # Output:  Matrix([[28., 34.], [56., 68.]])
     m1 = Matrix([[0.0, 1.0, 2.0],
                  [0.0, 2.0, 4.0]])
     v1 = Vector([[1], [2], [3]])
@@ -215,6 +215,7 @@ def main():
     v1 = Vector([[1], [2], [3]])
     v2 = Vector([[2], [4], [8]])
     print(v1 + v2)  # Output:Vector([[3],[6],[11]])
+
 
 if __name__ == '__main__':
     main()

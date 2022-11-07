@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def add_intercept(x):
     """Adds a column of 1's to the non-empty numpy.array x.
     Args:
@@ -11,32 +12,13 @@ def add_intercept(x):
     Raises:
     This function should not raise any Exception.
     """
-    if (not isinstance(x, np.ndarray)):
+    try:
+        if (not isinstance(x, np.ndarray)):
+            print("intercept_ invalid type")
+            return None
+        if (len(x.shape) == 1):
+            x = np.reshape(x, (x.shape[0], 1))
+        return np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
+    except Exception as inst:
+        print(inst)
         return None
-    if (len(x.shape) == 1):
-        x = np.reshape(x, (x.shape[0], 1))
-    shape = x.shape
-    x = np.insert(x, 0, np.ones(x.shape[0]), axis=1)
-    return np.reshape(x, (shape[0], shape[1] + 1))
-
-# Example 1:
-x = np.arange(1,6)
-print("x", x)
-print(add_intercept(x))
-"""
-Output:  array([[1., 1.],
-                [1., 3.],
-                [1., 2.],
-                [1., 4.],
-                [1., 5.]])
-""" 
-# Example 2:
-y = np.arange(1,10).reshape((3,3))
-print(y)
-print(add_intercept(y))
-"""
-Output:
-array([[1., 1., 2., 3.],
-       [1., 4., 5., 6.],
-       [1., 7., 8., 9.]]
-"""

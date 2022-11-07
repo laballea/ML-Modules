@@ -1,6 +1,3 @@
-
-
-
 class Matrix():
     def __init__(self, values=None):
         if (values is None):
@@ -29,7 +26,7 @@ class Matrix():
     def __add__(self, matrix):
         if (isinstance(matrix, Matrix)):
             if (self.shape == matrix.shape):
-                    return Matrix([[float(k) + float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
+                return Matrix([[float(k) + float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
             else:
                 raise ValueError("Matrixs does not have same shape !")
         raise TypeError("Can only add matrix to matrix")
@@ -37,7 +34,7 @@ class Matrix():
     def __radd__(self, matrix):
         if (isinstance(matrix, Matrix)):
             if (self.shape == matrix.shape):
-                    return Matrix([[float(k) + float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
+                return Matrix([[float(k) + float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
             else:
                 raise ValueError("Matrixs does not have same shape !")
         raise TypeError("Can only add matrix to matrix")
@@ -45,7 +42,7 @@ class Matrix():
     def __sub__(self, matrix):
         if (isinstance(matrix, Matrix)):
             if (self.shape == matrix.shape):
-                    return Matrix([[float(k) - float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
+                return Matrix([[float(k) - float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
             else:
                 raise ValueError("Matrixs does not have same shape !")
         raise TypeError("Can only add matrix to matrix")
@@ -53,7 +50,7 @@ class Matrix():
     def __rsub__(self, matrix):
         if (isinstance(matrix, Matrix)):
             if (self.shape == matrix.shape):
-                    return Matrix([[float(k) - float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
+                return Matrix([[float(k) - float(l) for (k, l) in zip(i, j)] for (i, j) in zip(self.data, matrix.data)])
             else:
                 raise ValueError("Matrixs does not have same shape !")
         raise TypeError("Can only add matrix to matrix")
@@ -102,6 +99,7 @@ class Matrix():
 
     def __repr__(self):
         return str(self.data)
+
 
 class Vector(Matrix):
     def __init__(self, values):
@@ -209,6 +207,7 @@ class Vector(Matrix):
             return Matrix([[Vector([[i] for i in row_data]).dot(self)] for row_data in scalar.data])
         else:
             raise TypeError("Vector can only be multiply by int or float")
+
     def __rmul__(self, scalar):
         if (isinstance(scalar, int) or isinstance(scalar, float)):
             if (self.shape[0] == 1):
@@ -227,4 +226,3 @@ class Vector(Matrix):
 
     def __repr__(self):
         return str(self.values)
-
