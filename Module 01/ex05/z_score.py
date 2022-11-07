@@ -21,11 +21,13 @@ def zscore(x):
             return var / len(x)
         except Exception:
             return None
+
     def std(x):
         try:
             return math.sqrt(var(x))
         except Exception:
             return None
+
     if not isinstance(x, np.ndarray):
         return None
     mean = float(sum(x) / len(x))

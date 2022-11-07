@@ -1,4 +1,3 @@
-import math
 import numpy as np
 
 
@@ -12,7 +11,6 @@ def minmax(x):
     Raises:
     This function shouldn't raise any Exception.
     """
-
     if not isinstance(x, np.ndarray):
         return None
     minX = min(x)

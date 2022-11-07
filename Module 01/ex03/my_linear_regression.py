@@ -12,17 +12,17 @@ class MyLinearRegression():
         self.max_iter = max_iter
         self.thetas = thetas
 
-    def add_intercept(self, x, type):
-        if (not isinstance(x, np.ndarray)):
+    def add_intercept(self, x):
+        try:
+            if (not isinstance(x, np.ndarray)):
+                print("intercept_ invalid type")
+                return None
+            if (len(x.shape) == 1):
+                x = np.reshape(x, (x.shape[0], 1))
+            return np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
+        except Exception as inst:
+            print(inst)
             return None
-        if (len(x.shape) == 1):
-            x = np.reshape(x, (x.shape[0], 1))
-        shape = x.shape
-        if (type == 1):
-            x = np.insert(x, 0, np.ones(x.shape[0]), axis=1)
-        elif (type == 0):
-            x = np.insert(x, 0, np.zeros(x.shape[0]), axis=1)
-        return np.reshape(x, (shape[0], shape[1] + 1))
 
     def simple_gradient(self, x, y):
         if (not isinstance(y, np.ndarray) or not isinstance(x, np.ndarray) or not isinstance(self.thetas, np.ndarray)):
@@ -31,7 +31,7 @@ class MyLinearRegression():
             return None
         fct = 1 / len(x)
         x_hat = self.predict_(x)
-        x = self.add_intercept(x, 1).T
+        x = self.add_intercept(x).T
         return np.array(fct * (x.dot((x_hat - y))))
 
     def fit_(self, x, y):
@@ -57,9 +57,8 @@ class MyLinearRegression():
             return None
         if (self.thetas.shape[0] != 2):
             return None
-        x = self.add_intercept(x, 1)
+        x = self.add_intercept(x)
         return x.dot(self.thetas)
-    
 
     def loss_elem_(self, y, y_hat):
         if (not (isinstance(y, np.ndarray) or isinstance(y_hat, np.ndarray))):
