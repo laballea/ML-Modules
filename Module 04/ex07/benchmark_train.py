@@ -2,14 +2,14 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-from ml42.utils_ml import data_spliter
 from ml42.utils_ml import add_polynomial_features
 from ml42.ridge import MyRidge
 from ml42.utils_ml import normalize
 from ml42.utils_ml import cross_validation
 import yaml
 import math
-import sys, getopt
+import sys
+import getopt
 
 
 def init_models(yml_models, data):
@@ -20,16 +20,15 @@ def init_models(yml_models, data):
     # combinations = np.array(list(itertools.product(list(itertools.product(pow)), repeat=len(x_head)))) # all combinations too long
     combinations = [np.full((len(x_head), 1), po) for po in pow]
     for comb in combinations:
-        name =''.join(["{}**{}_".format(x_name[:3], str(po[0])) for x_name, po in zip(x_head, comb)])
+        name = ''.join(["{}**{}_".format(x_name[:3], str(po[0])) for x_name, po in zip(x_head, comb)])
         yml_x = list([int(po[0]) for po in comb])
         if (sum(yml_x) != 0):
-            yml_theta = [1 for _ in range(sum(yml_x) + 1)]
             yml_models["models"][name] = {
-                "power_x":yml_x,
-                "rmse":None,
-                "total_it":0,
-                "alpha":1e-1,
-                "historic":{},
+                "power_x": yml_x,
+                "rmse": None,
+                "total_it": 0,
+                "alpha": 1e-1,
+                "historic": {},
                 "theta": {}
             }
             for lambda_ in tqdm(np.arange(0.2, 1.2, 0.2), leave=False):
@@ -37,6 +36,7 @@ def init_models(yml_models, data):
                 yml_models["models"][name]["theta"][str(lambda_)] = [1 for _ in range(sum(yml_x) + 1)]
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
+
 
 def train_models(yml_models, data, alpha, rate):
     X = np.array(data[yml_models["data"]["x_head"]])
@@ -59,6 +59,7 @@ def train_models(yml_models, data, alpha, rate):
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
 
+
 def best_models(yml_models):
     rmse_list = np.array([[str(key), float(value["rmse"])] for key, value in yml_models["models"].items()])
     yml_models["data"]["best_model"] = str(rmse_list[rmse_list[:, 1].astype('float64').argmin()][0])
@@ -66,9 +67,11 @@ def best_models(yml_models):
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
 
+
 def train(yml_models, data, alpha=0.1, rate=1000):
     train_models(yml_models, data, alpha, rate)
     best_models(yml_models)
+
 
 def display(yml_models, data):
     fig = plt.figure()
@@ -110,6 +113,7 @@ def main(argv):
             train(yml_models, data, alpha=alpha, rate=rate)
         elif opt == '--display':
             display(yml_models, data)
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

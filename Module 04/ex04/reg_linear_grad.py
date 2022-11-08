@@ -1,8 +1,10 @@
 import numpy as np
 
+
 def predict_(x, theta):
     x = np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
     return x.dot(theta)
+
 
 def reg_linear_grad(y, x, theta, lambda_):
     """Computes the regularized linear gradient of three non-empty numpy.ndarray,
@@ -34,11 +36,12 @@ def reg_linear_grad(y, x, theta, lambda_):
             if (j == 0):
                 gradient.append((1 / m) * sum_)
             else:
-                gradient.append((1 / m) * (sum_  + lambda_ * theta[j]))
+                gradient.append((1 / m) * (sum_ + lambda_ * theta[j]))
         return np.array(gradient).reshape(-1, 1)
     except Exception as inst:
         print(inst)
         return None
+
 
 def vec_reg_linear_grad(y, x, theta, lambda_):
     """Computes the regularized linear gradient of three non-empty numpy.ndarray,

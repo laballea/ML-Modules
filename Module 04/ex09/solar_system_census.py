@@ -3,7 +3,8 @@ import random
 import numpy as np
 import pandas as pd
 import yaml
-import sys, getopt
+import sys
+import getopt
 from ml42.utils_ml import data_spliter
 from ml42.utils_ml import add_polynomial_features
 from ml42.utils_ml import cross_validation
@@ -12,11 +13,12 @@ from ml42.utils_ml import normalize
 from ml42.metrics import f1_score_
 from tqdm import tqdm
 
+
 def display_3d(x, y, y_hat, title):
     error = np.mean(y != y_hat) * 100
     fig = plt.figure()
     ax = fig.add_subplot(projection='3d')
-    colors = {0:"b", 1:"r", 2:"g", 3:"cyan"}
+    colors = {0: "b", 1: "r", 2: "g", 3: "cyan"}
     ax.scatter(x[:, 0], x[:, 1], x[:, 2], c=pd.DataFrame(y, columns=["Origin"])["Origin"].map(colors), label="true value")
     ax.scatter(x[:, 0], x[:, 1], x[:, 2], marker="x", c=pd.DataFrame(y_hat, columns=["Origin"])["Origin"].map(colors), label="predicted value")
     ax.set_xlabel('weight')
@@ -25,8 +27,9 @@ def display_3d(x, y, y_hat, title):
     ax.set_title("{:.2f}%error - {}".format(error, title))
     ax.legend()
 
+
 def bar_plot(yml_models):
-    fig = plt.figure(figsize = (10, 5))
+    fig = plt.figure(figsize=(10, 5))
     for models_name in tqdm(yml_models["models"], leave=False):
         model = yml_models["models"][models_name]
         clr = '#%06X' % random.randint(0, 0xFFFFFF)
@@ -35,6 +38,7 @@ def bar_plot(yml_models):
     plt.xlabel("models")
     plt.ylabel("f1_score")
     plt.title("f1_score of each models + lambda")
+
 
 def f1_score_test_set(yml_models, data):
     X = np.array(data[0][["weight", "height", "bone_density"]])
@@ -57,12 +61,12 @@ def f1_score_test_set(yml_models, data):
             result[models_name][lambda_] = f1_score_(y_test, format_result(pred))
     return result
 
+
 def previsu(yml_models, data):
     X = np.array(data[0][["weight", "height", "bone_density"]])
     Y = np.array(data[1][["Origin"]])
     X = normalize(X)
 
-    result = pd.DataFrame()
     model = yml_models["models"][yml_models["data"]["best_model"]]
     for lambda_ in tqdm(np.arange(0.2, 1.2, 0.2), leave=False):
         X_poly = add_polynomial_features(X, model["power_x"])
@@ -75,6 +79,7 @@ def previsu(yml_models, data):
         pred = format_result(pred)
         display_3d(X, Y, pred, yml_models["data"]["best_model"] + " / " + str(lambda_))
 
+
 def display(yml_models, data):
     X = np.array(data[0][["weight", "height", "bone_density"]])
     Y = np.array(data[1][["Origin"]])
@@ -84,12 +89,14 @@ def display(yml_models, data):
     previsu(yml_models, data)
     plt.show()
 
+
 def format(arr, zipcode):
     copy = arr.copy()
     copy[:, 0][copy[:, 0] != zipcode] = -1
     copy[:, 0][copy[:, 0] == zipcode] = 1
-    copy[:, 0][copy[:, 0] == -1] = 0  
+    copy[:, 0][copy[:, 0] == -1] = 0
     return copy
+
 
 def format_result(arr):
     result = []
@@ -97,6 +104,7 @@ def format_result(arr):
         result.append(row.idxmax())
     result = np.array(result).reshape(-1, 1)
     return result
+
 
 def one_vs_all(k_folds, alpha, rate, lambda_, model):
     result = pd.DataFrame()
@@ -110,6 +118,7 @@ def one_vs_all(k_folds, alpha, rate, lambda_, model):
         model["theta"][str(lambda_)][zipcode] = [float(tta) for tta in my_lr.theta]
         result[zipcode] = y_hat.reshape(len(y_hat))
     return f1_score_(y_test, format_result(result))
+
 
 def train(yml_models, data, alpha, rate):
     X = np.array(data[0][["weight", "height", "bone_density"]])
@@ -162,6 +171,7 @@ def main(argv):
             train(yml_models, [data_x, data_y], alpha=alpha, rate=rate)
         elif opt == '--display':
             display(yml_models, [data_x, data_y])
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

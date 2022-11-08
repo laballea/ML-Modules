@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def regularization(function):
     def new_function(*args, **kwargs):
         ret = function(*args, **kwargs)
@@ -9,6 +10,7 @@ def regularization(function):
         l2 = float(theta[1:].T.dot(theta[1:]))
         return ret + ((lambda_ / (2 * m)) * l2)
     return new_function
+
 
 @regularization
 def reg_log_loss_(y, y_hat, theta, lambda_):

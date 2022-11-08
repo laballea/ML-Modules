@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def reg_loss_(y, y_hat, theta, lambda_):
     """Computes the regularized loss of a linear regression model from two non-empty numpy.array, without any for loop.
     Args:

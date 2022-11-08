@@ -1,11 +1,14 @@
 import numpy as np
 
+
 def sigmoid_(x):
     return 1 / (1 + np.exp(-x))
+
 
 def predict_(x, theta):
     x = np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
     return sigmoid_(x.dot(theta))
+
 
 def reg_logistic_grad(y, x, theta, lambda_):
     """Computes the regularized logistic gradient of three non-empty numpy.ndarray,
@@ -37,11 +40,12 @@ def reg_logistic_grad(y, x, theta, lambda_):
             if (j == 0):
                 gradient.append((1 / m) * sum_)
             else:
-                gradient.append((1 / m) * (sum_  + lambda_ * theta[j]))
+                gradient.append((1 / m) * (sum_ + lambda_ * theta[j]))
         return np.array(gradient).reshape(-1, 1)
     except Exception as inst:
         print(inst)
         return None
+
 
 def vec_reg_logistic_grad(y, x, theta, lambda_):
     """Computes the regularized logistic gradient of three non-empty numpy.ndarray,

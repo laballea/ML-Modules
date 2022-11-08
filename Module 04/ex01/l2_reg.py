@@ -21,6 +21,7 @@ def iterative_l2(theta):
         print(inst)
         return None
 
+
 def l2(theta):
     """Computes the L2 regularization of a non-empty numpy.ndarray, without any for-loop.
     Args:

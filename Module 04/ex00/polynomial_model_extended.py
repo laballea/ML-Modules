@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def add_polynomial_features(x, power):
     """Add polynomial features to matrix x by raising its columns to every power in the range of 1 up to the power give
     Args:
@@ -21,11 +22,11 @@ def add_polynomial_features(x, power):
         if not isinstance(power, list):
             for po in range(2, power + 1):
                 for col in x.T:
-                    result = np.concatenate((result, (col**po).reshape(-1, 1)),axis=1)
+                    result = np.concatenate((result, (col**po).reshape(-1, 1)), axis=1)
         else:
             for col, power_el in zip(x.T, power):
                 for po in range(2, power_el + 1):
-                    result = np.concatenate((result, (col**po).reshape(-1, 1)),axis=1)   
+                    result = np.concatenate((result, (col**po).reshape(-1, 1)), axis=1)
         return np.array(result)
     except Exception as inst:
         print(inst)

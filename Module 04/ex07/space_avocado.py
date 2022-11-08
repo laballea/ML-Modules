@@ -1,13 +1,14 @@
 from matplotlib import pyplot as plt
-import matplotlib as mpl
 import numpy as np
 import pandas as pd
 import yaml
-import sys, getopt
+import sys
+import getopt
 from ml42.utils_ml import data_spliter
 from ml42.utils_ml import add_polynomial_features
 from ml42.ridge import MyRidge
 from ml42.utils_ml import normalize
+
 
 def train_model(yml_models, data, alpha, rate):
     X = np.array(data[yml_models["data"]["x_head"]])
@@ -31,6 +32,7 @@ def train_model(yml_models, data, alpha, rate):
     with open(yml_models["data"]["name"], 'w') as outfile:
         yaml.dump(yml_models, outfile, default_flow_style=None)
 
+
 def display(yml_models, data):
     X = np.array(data[yml_models["data"]["x_head"]])
     Y = np.array(data[yml_models["data"]["y_head"]])
@@ -53,7 +55,7 @@ def display(yml_models, data):
         ax.set_ylabel('prod_distance')
         ax.set_zlabel('time_delivery')
         ax.set_title("{} / rmse: {}".format(yml_models["data"]["best_model"] + " / " + str(lambda_), rmse))
-        
+
         figure, axis = plt.subplots(3, 1)
         for idx, title in enumerate(yml_models["data"]["x_head"]):
             axis[idx].scatter(x_test[:, idx], y_test, c="b", marker="o", label="price")
@@ -74,6 +76,7 @@ def display(yml_models, data):
 
 def train(yml_models, data, alpha=0.1, rate=1000):
     train_model(yml_models, data, alpha, rate)
+
 
 def main(argv):
     try:

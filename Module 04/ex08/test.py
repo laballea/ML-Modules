@@ -26,5 +26,5 @@ print(model3.penalty)
 """# Output
 None"""
 print(model3.lambda_)
-"""# Outpu
+"""# Output
 0.0"""

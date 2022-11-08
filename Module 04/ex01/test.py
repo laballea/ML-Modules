@@ -12,7 +12,7 @@ print(l2(x))
 """# Output:
 911.0"""
 
-y = np.array([3,0.5,-6]).reshape((-1, 1))
+y = np.array([3, 0.5, -6]).reshape((-1, 1))
 # Example 3:
 print(iterative_l2(y))
 """# Output:
