@@ -8,36 +8,36 @@ y = np.array([['dog'], ['dog'], ['norminet'], ['norminet'], ['dog'], ['norminet'
 # Example 1:
 # # your implementation
 print(confusion_matrix_(y, y_hat))
-## Output:
+# Output:
 """array([[0 0 0]
 [0 2 1]
 [1 0 2]])"""
-## sklearn implementation
+# sklearn implementation
 print(confusion_matrix(y, y_hat))
-"""## Output:
+"""# Output:
 array([[0 0 0]
 [0 2 1]
 [1 0 2]])"""
 
 # Example 2:
-## your implementation
+# your implementation
 print(confusion_matrix_(y, y_hat, labels=['dog', 'norminet']))
-"""## Output:
+"""# Output:
 array([[2 1]
 [0 2]])"""
-## sklearn implementation
+# sklearn implementation
 print(confusion_matrix(y, y_hat, labels=['dog', 'norminet']))
-"""## Output:
+"""# Output:
 array([[2 1]
 [0 2]])"""
-#Example 3:
+# Example 3:
 print(confusion_matrix_(y, y_hat, df_option=True))
 """#Output:
 bird dog norminet
 bird 0 0 0
 dog 0 2 1
 norminet 1 0 2"""
-#Example 2:
+# Example 2:
 print(confusion_matrix_(y, y_hat, labels=['bird', 'dog'], df_option=True))
 """#Output:
 bird dog

@@ -1,6 +1,5 @@
 import numpy as np
-from utils.log_pred import logistic_predict_
-from vec_log_loss import vec_log_loss_
+from vec_log_loss import vec_log_loss_, logistic_predict_
 
 
 # Example 1:

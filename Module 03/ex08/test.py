@@ -6,43 +6,43 @@ y_hat = np.array([1, 1, 0, 1, 0, 0, 1, 1]).reshape((-1, 1))
 y = np.array([1, 0, 0, 1, 0, 1, 0, 0]).reshape((-1, 1))
 
 # Accuracy
-## your implementation
+# your implementation
 print(accuracy_score_(y, y_hat))
-"""## Output:
+"""# Output:
 0.5"""
-## sklearn implementation
+# sklearn implementation
 print(accuracy_score(y, y_hat))
-"""## Output:
+"""# Output:
 0.5"""
 
 # Precision
-## your implementation
+# your implementation
 print(precision_score_(y, y_hat))
-"""## Output:
+"""# Output:
 0.4"""
-## sklearn implementation
+# sklearn implementation
 print(precision_score(y, y_hat))
-"""## Output:
+"""# Output:
 0.4"""
 
 # Recall
-## your implementation
+# your implementation
 print(recall_score_(y, y_hat))
-"""## Output:
+"""# Output:
 0.6666666666666666"""
-## sklearn implementation
+# sklearn implementation
 print(recall_score(y, y_hat))
-"""## Output:
+"""# Output:
 0.6666666666666666"""
 
 # F1-score
-## your implementation
+# your implementation
 print(f1_score_(y, y_hat))
-"""## Output:
+"""# Output:
 0.5"""
-## sklearn implementation
+# sklearn implementation
 print(f1_score(y, y_hat))
-"""## Output:
+"""# Output:
 0.5"""
 
 # Example 2:
@@ -50,41 +50,41 @@ y_hat = np.array(['norminet', 'dog', 'norminet', 'norminet', 'dog', 'dog', 'dog'
 y = np.array(['dog', 'dog', 'norminet', 'norminet', 'dog', 'norminet', 'dog', 'norminet'])
 
 # Accuracy
-## your implementation
+# your implementation
 print(accuracy_score_(y, y_hat))
-"""## Output:
+"""# Output:
 0.625"""
-## sklearn implementation
+# sklearn implementation
 print(accuracy_score(y, y_hat))
-"""## Output:
+"""# Output:
 0.625"""
 
 # Precision
-## your implementation
+# your implementation
 print(precision_score_(y, y_hat, pos_label='dog'))
-"""## Output:
+"""# Output:
 0.6"""
-## sklearn implementation
+# sklearn implementation
 print(precision_score(y, y_hat, pos_label='dog'))
-"""## Output:
+"""# Output:
 0.6"""
 
 # Recall
-## your implementation
+# your implementation
 print(recall_score_(y, y_hat, pos_label='dog'))
-"""## Output:
+"""# Output:
 0.75"""
-## sklearn implementation
+# sklearn implementation
 print(recall_score(y, y_hat, pos_label='dog'))
-"""## Output:
+"""# Output:
 0.75"""
 
 # F1-score
-## your implementation
+# your implementation
 print(f1_score_(y, y_hat, pos_label='dog'))
-"""## Output:
+"""# Output:
 0.6666666666666665"""
-## sklearn implementation
+# sklearn implementation
 print(f1_score(y, y_hat, pos_label='dog'))
-"""## Output:
-0.666666666666666"""
+"""# Output:
+0.6666666666666665"""

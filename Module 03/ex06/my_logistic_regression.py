@@ -1,6 +1,7 @@
 import numpy as np
 from tqdm import tqdm
 
+
 class MyLogisticRegression():
     """
     Description:
@@ -10,19 +11,16 @@ class MyLogisticRegression():
         self.alpha = alpha
         self.max_iter = max_iter
         self.theta = theta
-    
-    def intercept_(self, x, type=1):
-        if (not isinstance(x, np.ndarray)):
-            return None
-        if (len(x.shape) == 1):
-            x = np.reshape(x, (x.shape[0], 1))
-        shape = x.shape
-        if (type == 1):
-            x = np.insert(x, 0, np.ones(x.shape[0]), axis=1)
-        elif (type == 0):
-            x = np.insert(x, 0, np.zeros(x.shape[0]), axis=1)
-        return np.reshape(x, (shape[0], shape[1] + 1))
 
+    def intercept_(self, x):
+        try:
+            if (not isinstance(x, np.ndarray)):
+                print("intercept_ invalid type")
+                return None
+            return np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
+        except Exception as inst:
+            print(inst)
+            return None
 
     def sigmoid_(self, x):
         if (not isinstance(x, np.ndarray)):
@@ -43,7 +41,7 @@ class MyLogisticRegression():
         if x.shape[1] != self.theta.shape[0] - 1:
             print("predict_ Invalid shape !")
             return None
-        x = self.add_intercept(x)
+        x = self.intercept_(x)
         return self.sigmoid_(x.dot(self.theta))
 
     def loss_elem_(self, y, y_hat):

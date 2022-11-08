@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+
 def confusion_matrix_(y, y_hat, labels=None, df_option=False):
     """
     Compute confusion matrix to evaluate the accuracy of a classification.
@@ -34,12 +35,10 @@ def confusion_matrix_(y, y_hat, labels=None, df_option=False):
                 confusion_mtrx[labels.index(y[i])][labels.index(y_hat[i])] += 1
             else:
                 confusion_mtrx[labels.index(y[i])][labels.index(y_hat[i])] += 1
-        if (df_option == False):
+        if (not df_option):
             return confusion_mtrx.astype(int)
         else:
             return pd.DataFrame(confusion_mtrx.astype(int), columns=labels, index=labels)
-
-
     except Exception as inst:
         print(inst)
         return None
