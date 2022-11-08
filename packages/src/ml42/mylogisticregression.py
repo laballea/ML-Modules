@@ -2,12 +2,14 @@ import numpy as np
 from tqdm import tqdm
 from .utils_ml import intercept_
 
+
 class MyLogisticRegression():
     """
     Description:
     My personnal logistic regression to classify things.
     """
     supported_penalities = ['l2']
+
     def __init__(self, theta, alpha=0.001, max_iter=1000, penalty="l2", lambda_=1.0):
         self.alpha = alpha
         self.max_iter = max_iter
@@ -16,7 +18,7 @@ class MyLogisticRegression():
         if (penalty not in self.supported_penalities):
             penalty = None
         self.penalty = penalty
-        if self.penalty == None:
+        if self.penalty is None:
             self.lambda_ = 0.0
 
     def sigmoid_(self, x):

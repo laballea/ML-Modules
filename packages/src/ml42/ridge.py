@@ -2,6 +2,7 @@ from tqdm import tqdm
 from ml42.mylinearregression import MyLinearRegression
 import numpy as np
 
+
 class MyRidge(MyLinearRegression):
     """
     Description:
@@ -69,7 +70,7 @@ class MyRidge(MyLinearRegression):
         for _ in tqdm(range(self.max_iter), leave=False):
             grdt = self.gradient_(x, y)
             self.theta = self.theta - (grdt * self.alpha)
-            # mse = int(self.mse_(y, self.predict_(x)))
-            # if (historic_bl == True):
-            #     historic.append(mse)
+            if (historic_bl):
+                mse = int(self.mse_(y, self.predict_(x)))
+                historic.append(mse)
         return historic

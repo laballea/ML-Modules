@@ -14,12 +14,13 @@ def data_spliter(x, y, proportion):
         return None
     arr = np.concatenate((x, y), axis=1)
     N = len(y)
-    X = arr[:,:x.shape[1]]
-    Y = arr[:,x.shape[1]]
+    X = arr[:, :x.shape[1]]
+    Y = arr[:, x.shape[1]]
     sample = int(proportion*N)
     np.random.shuffle(arr)
-    x_train, x_test, y_train, y_test = np.array(X[:sample,:]), np.array(X[sample:, :]), np.array(Y[:sample, ]).reshape(-1, 1), np.array(Y[sample:,]).reshape(-1, 1)
+    x_train, x_test, y_train, y_test = np.array(X[:sample, :]), np.array(X[sample:, :]), np.array(Y[:sample, ]).reshape(-1, 1), np.array(Y[sample:, ]).reshape(-1, 1)
     return (x_train, x_test, y_train, y_test)
+
 
 def cross_validation(x, y, K):
     """
@@ -38,20 +39,11 @@ def cross_validation(x, y, K):
         sample = int((1 / K) * N)
         test = arr[(sample * n):(sample * (n + 1))]
         train = np.concatenate([arr[0:(sample * n)], arr[(sample * (n + 1)):N]])
-        x_train, y_train, x_test, y_test = train[:,:x.shape[1]], train[:,x.shape[1]].reshape(-1, 1), test[:,:x.shape[1]], test[:,x.shape[1]].reshape(-1, 1),
+        x_train, y_train, x_test, y_test = train[:, :x.shape[1]], train[:, x.shape[1]].reshape(-1, 1), test[:, :x.shape[1]], test[:, x.shape[1]].reshape(-1, 1),
         yield (x_train, y_train, x_test, y_test)
 
+
 def add_polynomial_features(x, power):
-    """Add polynomial features to matrix x by raising its columns to every power in the range of 1 up to the power give
-    Args:
-    x: has to be an numpy.ndarray, a matrix of shape m * n.
-    power: has to be an int, the power up to which the columns of matrix x are going to be raised.
-    Returns:
-    The matrix of polynomial features as a numpy.ndarray, of shape m * (np), containg the polynomial feature va
-    None if x is an empty numpy.ndarray.
-    Raises:
-    This function should not raise any Exception.
-    """
     try:
         if (not isinstance(x, np.ndarray) or (not isinstance(power, int) and not isinstance(power, list))):
             print("Invalid type")
@@ -62,15 +54,16 @@ def add_polynomial_features(x, power):
         if not isinstance(power, list):
             for po in range(2, power + 1):
                 for col in x.T:
-                    result = np.concatenate((result, (col**po).reshape(-1, 1)),axis=1)
+                    result = np.concatenate((result, (col**po).reshape(-1, 1)), axis=1)
         else:
             for col, power_el in zip(x.T, power):
                 for po in range(2, power_el + 1):
-                    result = np.concatenate((result, (col**po).reshape(-1, 1)),axis=1)   
+                    result = np.concatenate((result, (col**po).reshape(-1, 1)), axis=1)
         return np.array(result)
     except Exception as inst:
         print(inst)
         return None
+
 
 def intercept_(x):
     """
@@ -84,6 +77,7 @@ def intercept_(x):
     except Exception as inst:
         print(inst)
         return None
+
 
 def normalize(x):
     """
