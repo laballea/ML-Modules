@@ -4,10 +4,10 @@ import pandas as pd
 import yaml
 import sys
 import getopt
-from ml42.utils_ml import data_spliter
-from ml42.utils_ml import add_polynomial_features
-from ml42.ridge import MyRidge
-from ml42.utils_ml import normalize
+from utils.utils_ml import data_spliter
+from utils.utils_ml import add_polynomial_features
+from utils.ridge import MyRidge
+from utils.utils_ml import normalize
 
 
 def train_model(yml_models, data, alpha, rate):

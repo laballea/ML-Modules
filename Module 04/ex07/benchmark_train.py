@@ -2,10 +2,10 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-from ml42.utils_ml import add_polynomial_features
-from ml42.ridge import MyRidge
-from ml42.utils_ml import normalize
-from ml42.utils_ml import cross_validation
+from utils.utils_ml import add_polynomial_features
+from utils.ridge import MyRidge
+from utils.utils_ml import normalize
+from utils.utils_ml import cross_validation
 import yaml
 import math
 import sys

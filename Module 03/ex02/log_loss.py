@@ -1,6 +1,19 @@
 import math
 import numpy as np
-from ml42.utils_ml import intercept_
+
+
+def intercept_(x):
+    """
+    add one columns to x
+    """
+    try:
+        if (not isinstance(x, np.ndarray)):
+            print("intercept_ invalid type")
+            return None
+        return np.concatenate([np.ones(len(x)).reshape(-1, 1), x], axis=1)
+    except Exception as inst:
+        print(inst)
+        return None
 
 
 def sigmoid_(x):

@@ -4,12 +4,12 @@ import pandas as pd
 import yaml
 import sys
 import getopt
-from ml42.utils_ml import data_spliter
-from ml42.utils_ml import add_polynomial_features
-from ml42.utils_ml import cross_validation
-from ml42.mylogisticregression import MyLogisticRegression as myLR
-from ml42.utils_ml import normalize
-from ml42.metrics import f1_score_
+from utils.utils_ml import data_spliter
+from utils.utils_ml import add_polynomial_features
+from utils.utils_ml import cross_validation
+from utils.mylogisticregression import MyLogisticRegression as myLR
+from utils.utils_ml import normalize
+from utils.metrics import f1_score_
 from tqdm import tqdm
 
 

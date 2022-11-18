@@ -4,9 +4,9 @@ import pandas as pd
 import yaml
 import sys
 import getopt
-from ml42.utils_ml import data_spliter
-from ml42.mylogisticregression import MyLogisticRegression as myLR
-from ml42.utils_ml import normalize
+from utils.utils_ml import data_spliter
+from utils.mylogisticregression import MyLogisticRegression as myLR
+from utils.utils_ml import normalize
 
 
 def display(x, y, y_hat):

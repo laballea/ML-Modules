@@ -2,10 +2,10 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-from ml42.utils_ml import data_spliter
-from ml42.utils_ml import add_polynomial_features
-from ml42.mylinearregression import MyLinearRegression as myLR
-from ml42.utils_ml import normalize
+from utils.utils_ml import data_spliter
+from utils.utils_ml import add_polynomial_features
+from utils.mylinearregression import MyLinearRegression as myLR
+from utils.utils_ml import normalize
 import yaml
 import itertools
 import sys
