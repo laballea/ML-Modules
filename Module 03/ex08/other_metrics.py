@@ -6,21 +6,24 @@ def perf_measure(y, y_hat, pos_label):
     FP = 0
     TN = 0
     FN = 0
-    y = np.reshape(y, (len(y)))
-    y_hat = np.reshape(y_hat, (len(y_hat)))
-    true_type = pos_label
-    
-    for i in range(len(y_hat)):
-        if y[i] == y_hat[i] == true_type:
-            TP += 1
-        if y_hat[i] == true_type and y[i] != y_hat[i]:
-            FP += 1
-        if y[i] == y_hat[i] != true_type:
-            TN += 1
-        if y_hat[i] != true_type and y[i] != y_hat[i]:
-            FN += 1
+    try:
+        y = np.reshape(y, (len(y)))
+        y_hat = np.reshape(y_hat, (len(y_hat)))
+        true_type = pos_label
+        
+        for i in range(len(y_hat)):
+            if y[i] == y_hat[i] == true_type:
+                TP += 1
+            if y_hat[i] == true_type and y[i] != y_hat[i]:
+                FP += 1
+            if y[i] == y_hat[i] != true_type:
+                TN += 1
+            if y_hat[i] != true_type and y[i] != y_hat[i]:
+                FN += 1
 
-    return (TP, FP, TN, FN)
+        return (TP, FP, TN, FN)
+    except Exception:
+        return None
 
 
 def accuracy_score_(y, y_hat):
