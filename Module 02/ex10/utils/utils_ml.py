@@ -91,4 +91,18 @@ def normalize(x):
         min_r = min(row)
         max_r = max(row)
         result.append([(el - min_r) / (max_r - min_r) for el in row])
+    return np.array(result, dtype=np.float64).T
+
+def unnormalize(base_x, x):
+    """
+    unnormalize matrix with minmax method
+    """
+    if not isinstance(x, np.ndarray):
+        print("normalize Invalid type.")
+        return None
+    result = []
+    for row_x, row_base in zip(x.T, base_x.T):
+        min_r = min(row_base)
+        max_r = max(row_base)
+        result.append([el * (max_r - min_r) + min_r for el in row_x])
     return np.array(result).T

@@ -1,7 +1,7 @@
 import math
 import numpy as np
 from tqdm import tqdm
-from utils_ml import intercept_
+from utils.utils_ml import intercept_
 
 
 class MyLinearRegression():
@@ -42,7 +42,7 @@ class MyLinearRegression():
             grdt = self.simple_gradient(x, y)
             self.theta = self.theta - (grdt * self.alpha)
             if (historic_bl):
-                mse = int(self.mse_(y, self.predict_(x)))
+                mse = float(self.mse_(y, self.predict_(x)))
                 historic.append(mse)
         return historic
 
@@ -92,7 +92,7 @@ class MyLinearRegression():
             return None
         y_actual = y.reshape(len(y),)
         y_predicted = y_hat.reshape(len(y_hat),)
-        return np.square(np.subtract(y_actual, y_predicted)).mean()
+        return float(np.square(np.subtract(y_actual, y_predicted)).mean())
 
     def rmse_(self, y, y_hat):
         return math.sqrt(self.mse_(y, y_hat))

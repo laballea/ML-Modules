@@ -8,7 +8,7 @@ import getopt
 from utils.utils_ml import data_spliter
 from utils.utils_ml import add_polynomial_features
 from utils.mylinearregression import MyLinearRegression as myLR
-from utils.utils_ml import normalize
+from utils.utils_ml import *
 
 
 def train_model(yml_models, data, alpha, rate):
@@ -17,7 +17,7 @@ def train_model(yml_models, data, alpha, rate):
     x_train, x_test, y_train, y_test = data_spliter(X, Y, 0.9)
     x_test = normalize(x_test)
     x = normalize(x_train)
-    y = y_train
+    y = normalize(y_train)
     models = yml_models["models"][yml_models["data"]["best_model"]]
     x_ = add_polynomial_features(x, models["power_x"])
     x_test_ = add_polynomial_features(x_test, models["power_x"])
@@ -25,8 +25,8 @@ def train_model(yml_models, data, alpha, rate):
 
     my_lr = myLR(theta, alpha, rate)
     historic = my_lr.fit_(x_, y, historic_bl=True)
-    models["rmse"] = math  .sqrt(historic.pop())
-    models["theta"] = [int(tta) for tta in my_lr.theta]
+    models["mse"] = historic[-1]
+    models["theta"] = [float(tta) for tta in my_lr.theta]
     models["total_it"] = int(models["total_it"]) + rate
     models["historic"] = models["historic"] + historic
     with open(yml_models["data"]["name"], 'w') as outfile:
@@ -37,23 +37,23 @@ def display(yml_models, data):
     X = np.array(data[yml_models["data"]["x_head"]])
     Y = np.array(data[yml_models["data"]["y_head"]])
     x_train, x_test, y_train, y_test = data_spliter(X, Y, 0.9)
-    x_test = normalize(x_test)
     model = yml_models["models"][yml_models["data"]["best_model"]]
-    x_test_ = add_polynomial_features(x_test, model["power_x"])
+    x_test_ = add_polynomial_features(normalize(x_test), model["power_x"])
     theta = np.array(model["theta"]).reshape(-1, 1)
     my_lr = myLR(theta)
-    y_hat = my_lr.predict_(x_test_)
-    rmse = my_lr.rmse_(y_test, y_hat)
+    y_hat = unnormalize(y_test, my_lr.predict_(x_test_))
+    mse = my_lr.mse_(normalize(y_test), normalize(y_hat))
+
     for idx, title in enumerate(yml_models["data"]["x_head"]):
         plt.figure()
         plt.scatter(x_test[:, idx], y_test, c="b", marker="o", label="price")
         plt.scatter(x_test[:, idx], y_hat, c="r", marker="x", label="predicted price")
         plt.xlabel(title)
         plt.ylabel("price")
-        plt.title("{} / rmse: {}".format(yml_models["data"]["best_model"], rmse))
+        plt.title("{} / mse: {:.2e}".format(yml_models["data"]["best_model"], mse))
     fig = plt.figure()
     ax = fig.add_subplot()
-    ax.plot(np.arange(int(model["total_it"])), np.sqrt(model["historic"]), label=yml_models["data"]["best_model"])
+    ax.plot(np.arange(int(model["total_it"])), model["historic"], label=yml_models["data"]["best_model"])
     ax.set_xlabel("number iteration")
     ax.set_ylabel("mse")
     plt.show()

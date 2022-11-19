@@ -34,4 +34,10 @@ def simple_predict(x, theta):
     if (len(theta) != x.shape[1] + 1):
         return None
     x = add_intercept(x)
-    return x.dot(theta)
+    result = []
+    for i in range(len(x)):
+        sum = 0
+        for x_n, theta_n in zip(x.T, theta):
+            sum += x_n * theta_n
+        result.append([sum])
+    return sum

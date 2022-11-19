@@ -10,7 +10,6 @@ print(predict_(x, theta1))
 
 # Example 2:
 theta2 = np.array([0, 1, 0, 0]).reshape((-1, 1))
-print(x, theta2)
 print(predict_(x, theta2))
 # Output:  array([[ 1.], [ 4.], [ 7.], [10.]])
 
