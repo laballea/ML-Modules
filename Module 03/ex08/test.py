@@ -25,6 +25,15 @@ print(precision_score(y, y_hat))
 """# Output:
 0.4"""
 
+# your implementation
+print(precision_score_(y, y_hat, pos_label=0))
+"""# Output:
+0.4"""
+# sklearn implementation
+print(precision_score(y, y_hat, pos_label=0))
+"""# Output:
+0.4"""
+
 # Recall
 # your implementation
 print(recall_score_(y, y_hat))
@@ -34,6 +43,16 @@ print(recall_score_(y, y_hat))
 print(recall_score(y, y_hat))
 """# Output:
 0.6666666666666666"""
+
+# your implementation
+print(recall_score_(y, y_hat, pos_label=0))
+"""# Output:
+0.6666666666666666"""
+# sklearn implementation
+print(recall_score(y, y_hat, pos_label=0))
+"""# Output:
+0.6666666666666666"""
+
 
 # F1-score
 # your implementation
@@ -86,5 +105,15 @@ print(f1_score_(y, y_hat, pos_label='dog'))
 0.6666666666666665"""
 # sklearn implementation
 print(f1_score(y, y_hat, pos_label='dog'))
+"""# Output:
+0.6666666666666665"""
+
+# F1-score
+# your implementation
+print(f1_score_(y, y_hat, pos_label='norminet'))
+"""# Output:
+0.6666666666666665"""
+# sklearn implementation
+print(f1_score(y, y_hat, pos_label='norminet'))
 """# Output:
 0.6666666666666665"""
