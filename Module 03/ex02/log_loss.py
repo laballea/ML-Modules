@@ -3,9 +3,6 @@ import numpy as np
 
 
 def intercept_(x):
-    """
-    add one columns to x
-    """
     try:
         if (not isinstance(x, np.ndarray)):
             print("intercept_ invalid type")
@@ -15,30 +12,35 @@ def intercept_(x):
         print(inst)
         return None
 
-
 def sigmoid_(x):
-    if (not isinstance(x, np.ndarray)):
-        print("Invalid type !")
+    try:
+        if (not isinstance(x, np.ndarray)):
+            print("Invalid type !")
+            return None
+        if x.size == 0:
+            print("Empty array !")
+            return None
+        return 1 / (1 + np.exp(-x))
+    except Exception as inst:
+        print(inst)
         return None
-    if x.size == 0:
-        print("Empty array !")
-        return None
-    return 1 / (1 + np.exp(-x))
-
 
 def logistic_predict_(x, theta):
-    if (not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
-        print("Invalid type !")
+    try:
+        if (not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
+            print("Invalid type !")
+            return None
+        if x.size == 0 or theta.size == 0:
+            print("Empty array !")
+            return None
+        if x.shape[1] != theta.shape[0] - 1:
+            print("Invalid shape !")
+            return None
+        x = intercept_(x)
+        return sigmoid_(x.dot(theta))
+    except Exception as inst:
+        print(inst)
         return None
-    if x.size == 0 or theta.size == 0:
-        print("Empty array !")
-        return None
-    if x.shape[1] != theta.shape[0] - 1:
-        print("Invalid shape !")
-        return None
-    x = intercept_(x)
-    return sigmoid_(x.dot(theta))
-
 
 def log_loss_(y, y_hat, eps=1e-15):
     """
@@ -53,15 +55,19 @@ def log_loss_(y, y_hat, eps=1e-15):
     Raises:
     This function should not raise any Exception.
     """
-    if (not isinstance(y, np.ndarray) or not isinstance(y_hat, np.ndarray)):
-        print("Invalid type !")
+    try:
+        if (not isinstance(y, np.ndarray) or not isinstance(y_hat, np.ndarray)):
+            print("Invalid type !")
+            return None
+        if y.size == 0 or y_hat.size == 0:
+            print("Empty array !")
+            return None
+        if y.shape != y_hat.shape:
+            print("Invalid shape !")
+            return None
+        m, n = y.shape
+        y_hat = y_hat + eps
+        return float(-(1 / m) * sum([(y[i] * math.log(y_hat[i])) + ((1 - y[i]) * math.log(1 - y_hat[i])) for i in range(m)]))
+    except Exception as inst:
+        print(inst)
         return None
-    if y.size == 0 or y_hat.size == 0:
-        print("Empty array !")
-        return None
-    if y.shape != y_hat.shape:
-        print("Invalid shape !")
-        return None
-    m, n = y.shape
-    y_hat = y_hat + eps
-    return float(-(1 / m) * sum([(y[i] * math.log(y_hat[i])) + ((1 - y[i]) * math.log(1 - y_hat[i])) for i in range(m)]))

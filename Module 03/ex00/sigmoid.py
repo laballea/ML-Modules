@@ -12,10 +12,13 @@ def sigmoid_(x):
     Raises:
     This function should not raise any Exception.
     """
-    if (not isinstance(x, np.ndarray)):
-        print("Invalid type !")
+    try:
+        if (not isinstance(x, np.ndarray)):
+            print("Invalid type !")
+            return None
+        if x.size == 0:
+            print("Empty array !")
+            return None
+        return 1 / (1 + np.exp(-x))
+    except:
         return None
-    if x.size == 0:
-        print("Empty array !")
-        return None
-    return 1 / (1 + np.exp(-x))

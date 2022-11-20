@@ -20,6 +20,7 @@ def display(x, y, y_hat):
     ax.set_ylabel('height')
     ax.set_zlabel('bone_density')
     ax.set_title("{:.2f}%".format(error))
+    plt.legend()
 
     fig, axis = plt.subplots(3, 1)
     fig.suptitle("{:.2f}%".format(error), fontsize=14)
@@ -28,7 +29,7 @@ def display(x, y, y_hat):
         axis[idx].scatter(x[:, idx], y, c="r", label="true value")
         axis[idx].scatter(x[:, idx], y_hat, c="b", label="predicted value")
         axis[idx].set_xlabel(i)
-
+    plt.legend()
     plt.show()
 
 
@@ -41,7 +42,7 @@ def exec(slr_planets, slr_, zipcode):
     x_train, x_test, y_train, y_test = data_spliter(np.array(X), np.array(Y), 0.7)
     x_test = normalize(x_test)
     x_train = normalize(x_train)
-    my_lr = myLR(np.ones(X.shape[1] + 1).reshape(-1, 1), 0.01, 100000)
+    my_lr = myLR(np.ones(X.shape[1] + 1).reshape(-1, 1), 0.3, 100000)
     my_lr.fit_(x_train, y_train)
     y_hat = np.around(my_lr.predict_(x_test))
     display(x_test, y_test, y_hat)

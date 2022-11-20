@@ -25,14 +25,17 @@ def sigmoid_(x):
     Raises:
     This function should not raise any Exception.
     """
-    if (not isinstance(x, np.ndarray)):
-        print("Invalid type !")
+    try:
+        if (not isinstance(x, np.ndarray)):
+            print("Invalid type !")
+            return None
+        if x.size == 0:
+            print("Empty array !")
+            return None
+        return 1 / (1 + np.exp(-x))
+    except Exception as inst:
+        print(inst)
         return None
-    if x.size == 0:
-        print("Empty array !")
-        return None
-    return 1 / (1 + np.exp(-x))
-
 
 def logistic_predict_(x, theta):
     """Computes the vector of prediction y_hat from two non-empty numpy.ndarray.
@@ -46,14 +49,18 @@ def logistic_predict_(x, theta):
     Raises:
     This function should not raise any Exception.
     """
-    if (not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
-        print("Invalid type !")
+    try:
+        if (not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray)):
+            print("Invalid type !")
+            return None
+        if x.size == 0 or theta.size == 0:
+            print("Empty array !")
+            return None
+        if x.shape[1] != theta.shape[0] - 1:
+            print("Invalid shape !")
+            return None
+        x = intercept_(x)
+        return sigmoid_(x.dot(theta))
+    except Exception as inst:
+        print(inst)
         return None
-    if x.size == 0 or theta.size == 0:
-        print("Empty array !")
-        return None
-    if x.shape[1] != theta.shape[0] - 1:
-        print("Invalid shape !")
-        return None
-    x = intercept_(x)
-    return sigmoid_(x.dot(theta))
